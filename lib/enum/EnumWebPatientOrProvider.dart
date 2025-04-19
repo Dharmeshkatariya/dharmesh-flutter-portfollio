@@ -1,0 +1,4 @@
+enum EnumWebCustomPatientOrProvider{
+  patientPortal,
+  providerPortal
+}

@@ -1,0 +1,1 @@
+  enum EnumShowBookAppointmentDialogWeb { webDoctorListingView, webLoginHereView, webAddPatientInfoView, webAppointmentConfirmationView, webProviderResheduledAppointmentView }
