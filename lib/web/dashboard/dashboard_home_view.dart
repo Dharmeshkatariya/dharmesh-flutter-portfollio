@@ -333,11 +333,6 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
         controller.clickOnDownload();
       },
     );
-    // return ColorGlowEffect(
-    //   child: WebCustomButtonWithBG(width: 140.w, StringFile.downloadCV, 40, () {
-    //     controller.clickOnDownload();
-    //   }),
-    // );
   }
 
   Widget _profileCard(
