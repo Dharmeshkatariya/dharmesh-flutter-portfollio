@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../../custom_view/border_container.dart';
 import '../../../custom_view/custom_text.dart';
 import '../../../model/portfolio_model.dart';
@@ -292,8 +293,7 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
           curve: Curves.easeOutQuint,
           transform: Matrix4.identity()
             ..scale(_isHovered ? 1.03 : 1.0)
-            ..translate(
-                0.0, _isHovered ? -8.0 : 0.0, 0.0),
+            ..translate(0.0, _isHovered ? -8.0 : 0.0, 0.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.r),
             color: Colors.white,
@@ -310,218 +310,309 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
               width: 1,
             ),
           ),
-          child: Stack(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Image with gradient overlay
-                  Expanded(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.vertical(
-                          top: Radius.circular(16.r)),
-                      child: Stack(
-                        fit: StackFit.expand,
-                        children: [
-                          Image.asset(
-                            widget.item.imagePath ?? '',
-                            width: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                          // Gradient overlay
-                          Container(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  Colors.transparent,
-                                  Colors.black.withOpacity(0.7),
-                                ],
-                                stops: [0.6, 1],
+              // Image section with overlay
+              _buildImageSection(),
+              // Content section
+              Padding(
+                padding: EdgeInsets.all(20.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Title and category
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                widget.item.title ?? '',
+                                style: TextStyle(
+                                  fontSize: 18.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black87,
+                                ),
                               ),
-                            ),
-                          ),
-                          // Category chip
-                          Positioned(
-                            top: 16,
-                            right: 16,
-                            child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 300),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 12.w, vertical: 6.h),
-                              decoration: BoxDecoration(
-                                color: _getCategoryColor(widget.item.category),
-                                borderRadius: BorderRadius.circular(20.r),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.2),
-                                    blurRadius: 10,
-                                    offset: Offset(0, 4),
-                                  )
-                                ],
-                              ),
-                              child: Text(
+                              SizedBox(height: 4.h),
+                              Text(
                                 widget.item.category ?? '',
                                 style: TextStyle(
-                                  fontSize: 12.sp,
-                                  color: Colors.white,
+                                  fontSize: 14.sp,
+                                  color: _getCategoryColor(widget.item.category),
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                            ),
-                          ),
-                          // Hover effect
-                          if (_isHovered)
-                            Container(
-                              color: Colors.black.withOpacity(0.3),
-                              child: Center(
-                                child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 400),
-                                  curve: Curves.easeOutBack,
-                                  transform: Matrix4.identity()
-                                    ..scale(_isHovered ? 1.0 : 0.8),
-                                  child: Container(
-                                    padding: EdgeInsets.all(16.w),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle,
-                                      boxShadow: [
-                                        BoxShadow(
-                                            color: Colors.black.withOpacity(0.2),
-                                            blurRadius: 20,
-                                            spreadRadius: 2)
-                                      ],
-                                    ),
-                                    child: Icon(
-                                      Icons.zoom_in,
-                                      size: 28.w,
-                                      color: Colors.black,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  // Content section
-                  Padding(
-                    padding: EdgeInsets.all(20.w),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          widget.item.title ?? '',
-                          style: TextStyle(
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black87,
+                            ],
                           ),
                         ),
-                        SizedBox(height: 8.h),
-                        // Tags
-                        if (widget.item.tags != null &&
-                            widget.item.tags!.isNotEmpty)
-                          Wrap(
-                            spacing: 8.w,
-                            runSpacing: 8.h,
-                            children: widget.item.tags!
-                                .map((tag) => Container(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 10.w, vertical: 4.h),
-                              decoration: BoxDecoration(
-                                color: Colors.grey[100],
-                                borderRadius:
-                                BorderRadius.circular(6.r),
-                              ),
-                              child: Text(
-                                tag,
-                                style: TextStyle(
-                                  fontSize: 11.sp,
-                                  color: Colors.grey[600],
-                                ),
-                              ),
-                            ))
-                                .toList(),
+                        // Expand/collapse button
+                        Obx(() => IconButton(
+                          icon: Icon(
+                            widget.item.isMoreExpanded.value
+                                ? Icons.expand_less
+                                : Icons.expand_more,
+                            color: Colors.grey[600],
                           ),
-                        SizedBox(height: 12.h),
-                        // View button
-                        AnimatedContainer(
-                          duration: const Duration(milliseconds: 200),
+                          onPressed: () {
+                            widget.item.isMoreExpanded.toggle();
+                          },
+                          splashRadius: 20,
+                        )),
+                      ],
+                    ),
+                    SizedBox(height: 12.h),
+                    // Tags
+                    if (widget.item.tags != null && widget.item.tags!.isNotEmpty)
+                      Wrap(
+                        spacing: 8.w,
+                        runSpacing: 8.h,
+                        children: widget.item.tags!
+                            .map((tag) => Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10.w, vertical: 4.h),
                           decoration: BoxDecoration(
-                            color: _isTapped
-                                ? Colors.blue[700]
-                                : Colors.blue[600],
-                            borderRadius: BorderRadius.circular(8.r),
-                            boxShadow: _isHovered
-                                ? [
-                              BoxShadow(
-                                color: Colors.blue.withOpacity(0.4),
-                                blurRadius: 15,
-                                spreadRadius: 2,
-                                offset: Offset(0, 5),
-                              )
-                            ]
-                                : null,
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.circular(6.r),
                           ),
-                          padding: EdgeInsets.symmetric(vertical: 10.h),
-                          width: double.infinity,
-                          child: Center(
-                            child: Text(
-                              'VIEW PROJECT',
+                          child: Text(
+                            tag,
+                            style: TextStyle(
+                              fontSize: 11.sp,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ))
+                            .toList(),
+                      ),
+                    // Description (expandable)
+                    Obx(() => AnimatedCrossFade(
+                      duration: const Duration(milliseconds: 300),
+                      crossFadeState: widget.item.isMoreExpanded.value
+                          ? CrossFadeState.showSecond
+                          : CrossFadeState.showFirst,
+                      firstChild: SizedBox(height: 12.h),
+                      secondChild: Padding(
+                        padding: EdgeInsets.only(top: 12.h),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              widget.item.description ?? '',
                               style: TextStyle(
-                                fontSize: 13.sp,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
-                                letterSpacing: 0.5,
+                                fontSize: 14.sp,
+                                color: Colors.grey[700],
+                                height: 1.5,
+                              ),
+                            ),
+                            SizedBox(height: 16.h),
+                          ],
+                        ),
+                      ),
+                    )),
+                    // Action buttons
+                    Row(
+                      children: [
+                        // View Project button
+                        Expanded(
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            decoration: BoxDecoration(
+                              color: _isTapped
+                                  ? Colors.blue[700]
+                                  : Colors.blue[600],
+                              borderRadius: BorderRadius.circular(8.r),
+                              boxShadow: _isHovered
+                                  ? [
+                                BoxShadow(
+                                  color: Colors.blue.withOpacity(0.4),
+                                  blurRadius: 15,
+                                  spreadRadius: 2,
+                                  offset: Offset(0, 5),
+                                )
+                              ]
+                                  : null,
+                            ),
+                            padding: EdgeInsets.symmetric(vertical: 12.h),
+                            child: Center(
+                              child: Text(
+                                widget.item.buttonText ?? 'VIEW PROJECT',
+                                style: TextStyle(
+                                  fontSize: 13.sp,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 0.5,
+                                ),
                               ),
                             ),
                           ),
                         ),
+                        SizedBox(width: 12.w),
+                        // Visit Site button (only shown if URL exists)
+                        if (widget.item.siteUrl != null &&
+                            widget.item.siteUrl!.isNotEmpty)
+                          InkWell(
+                            borderRadius: BorderRadius.circular(8.r),
+                            onTap: () {
+                              // Handle site URL tap
+                            },
+                            child: Container(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 16.w, vertical: 12.h),
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey[300]!,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(8.r),
+                              ),
+                              child: Icon(
+                                Icons.public,
+                                size: 20.w,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ),
                       ],
                     ),
-                  ),
-                ],
-              ),
-              // Ribbon for featured items
-              if (widget.item.isFeatured ?? false)
-                Positioned(
-                  top: 0,
-                  left: -5,
-                  child: Container(
-                    padding:
-                    EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
-                    decoration: BoxDecoration(
-                      color: Colors.amber[600],
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16.r),
-                        bottomRight: Radius.circular(16.r),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
-                          blurRadius: 10,
-                          offset: Offset(0, 2),
-                        )
-                      ],
-                    ),
-                    child: Text(
-                      'FEATURED',
-                      style: TextStyle(
-                        fontSize: 10.sp,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 1,
-                      ),
-                    ),
-                  ),
+                  ],
                 ),
+              ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildImageSection() {
+    return Stack(
+      children: [
+        // Main image
+        ClipRRect(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
+          child: AspectRatio(
+            aspectRatio: 16 / 9,
+            child: Image.asset(
+              widget.item.imagePath ?? '',
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        // Gradient overlay
+        Positioned.fill(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.transparent,
+                  Colors.black.withOpacity(0.7),
+                ],
+                stops: [0.6, 1],
+              ),
+            ),
+          ),
+        ),
+        // Category chip
+        Positioned(
+          top: 16,
+          right: 16,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+            decoration: BoxDecoration(
+              color: _getCategoryColor(widget.item.category),
+              borderRadius: BorderRadius.circular(20.r),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 10,
+                  offset: Offset(0, 4),
+                )
+              ],
+            ),
+            child: Text(
+              widget.item.category ?? '',
+              style: TextStyle(
+                fontSize: 12.sp,
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ),
+        // Featured ribbon
+        if (widget.item.isFeatured ?? false)
+          Positioned(
+            top: 0,
+            left: -5,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+              decoration: BoxDecoration(
+                color: Colors.amber[600],
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16.r),
+                  bottomRight: Radius.circular(16.r),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    blurRadius: 10,
+                    offset: Offset(0, 2),
+                  )
+                ],
+              ),
+              child: Text(
+                'FEATURED',
+                style: TextStyle(
+                  fontSize: 10.sp,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: 1,
+                ),
+              ),
+            ),
+          ),
+        // Hover effect
+        if (_isHovered)
+          Positioned.fill(
+            child: Container(
+              color: Colors.black.withOpacity(0.3),
+              child: Center(
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 400),
+                  curve: Curves.easeOutBack,
+                  transform: Matrix4.identity()..scale(_isHovered ? 1.0 : 0.8),
+                  child: Container(
+                    padding: EdgeInsets.all(16.w),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            blurRadius: 20,
+                            spreadRadius: 2)
+                      ],
+                    ),
+                    child: Icon(
+                      Icons.zoom_in,
+                      size: 28.w,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+      ],
     );
   }
 
@@ -540,6 +631,287 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
     }
   }
 }
+
+// class _PortfolioItemCard extends StatefulWidget {
+//   final PortfolioModel item;
+//
+//   const _PortfolioItemCard({required this.item});
+//
+//   @override
+//   State<_PortfolioItemCard> createState() => _PortfolioItemCardState();
+// }
+//
+// class _PortfolioItemCardState extends State<_PortfolioItemCard> {
+//   bool _isHovered = false;
+//   bool _isTapped = false;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MouseRegion(
+//       onEnter: (_) => setState(() => _isHovered = true),
+//       onExit: (_) => setState(() {
+//         _isHovered = false;
+//         _isTapped = false;
+//       }),
+//       child: GestureDetector(
+//         onTapDown: (_) => setState(() => _isTapped = true),
+//         onTapUp: (_) => setState(() => _isTapped = false),
+//         onTapCancel: () => setState(() => _isTapped = false),
+//         child: AnimatedContainer(
+//           duration: const Duration(milliseconds: 300),
+//           curve: Curves.easeOutQuint,
+//           transform: Matrix4.identity()
+//             ..scale(_isHovered ? 1.03 : 1.0)
+//             ..translate(
+//                 0.0, _isHovered ? -8.0 : 0.0, 0.0),
+//           decoration: BoxDecoration(
+//             borderRadius: BorderRadius.circular(16.r),
+//             color: Colors.white,
+//             boxShadow: [
+//               BoxShadow(
+//                 color: Colors.black.withOpacity(_isHovered ? 0.15 : 0.05),
+//                 blurRadius: _isHovered ? 30 : 15,
+//                 spreadRadius: _isHovered ? -5 : 0,
+//                 offset: Offset(0, _isHovered ? 15 : 8),
+//               )
+//             ],
+//             border: Border.all(
+//               color: Colors.grey.withOpacity(0.1),
+//               width: 1,
+//             ),
+//           ),
+//           child: Stack(
+//             children: [
+//               Column(
+//                 crossAxisAlignment: CrossAxisAlignment.start,
+//                 children: [
+//                   // Image with gradient overlay
+//                   Expanded(
+//                     child: ClipRRect(
+//                       borderRadius: BorderRadius.vertical(
+//                           top: Radius.circular(16.r)),
+//                       child: Stack(
+//                         fit: StackFit.expand,
+//                         children: [
+//                           Image.asset(
+//                             widget.item.imagePath ?? '',
+//                             width: double.infinity,
+//                             fit: BoxFit.cover,
+//                           ),
+//                           // Gradient overlay
+//                           Container(
+//                             decoration: BoxDecoration(
+//                               gradient: LinearGradient(
+//                                 begin: Alignment.topCenter,
+//                                 end: Alignment.bottomCenter,
+//                                 colors: [
+//                                   Colors.transparent,
+//                                   Colors.black.withOpacity(0.7),
+//                                 ],
+//                                 stops: [0.6, 1],
+//                               ),
+//                             ),
+//                           ),
+//                           // Category chip
+//                           Positioned(
+//                             top: 16,
+//                             right: 16,
+//                             child: AnimatedContainer(
+//                               duration: const Duration(milliseconds: 300),
+//                               padding: EdgeInsets.symmetric(
+//                                   horizontal: 12.w, vertical: 6.h),
+//                               decoration: BoxDecoration(
+//                                 color: _getCategoryColor(widget.item.category),
+//                                 borderRadius: BorderRadius.circular(20.r),
+//                                 boxShadow: [
+//                                   BoxShadow(
+//                                     color: Colors.black.withOpacity(0.2),
+//                                     blurRadius: 10,
+//                                     offset: Offset(0, 4),
+//                                   )
+//                                 ],
+//                               ),
+//                               child: Text(
+//                                 widget.item.category ?? '',
+//                                 style: TextStyle(
+//                                   fontSize: 12.sp,
+//                                   color: Colors.white,
+//                                   fontWeight: FontWeight.w600,
+//                                 ),
+//                               ),
+//                             ),
+//                           ),
+//                           // Hover effect
+//                           if (_isHovered)
+//                             Container(
+//                               color: Colors.black.withOpacity(0.3),
+//                               child: Center(
+//                                 child: AnimatedContainer(
+//                                   duration: const Duration(milliseconds: 400),
+//                                   curve: Curves.easeOutBack,
+//                                   transform: Matrix4.identity()
+//                                     ..scale(_isHovered ? 1.0 : 0.8),
+//                                   child: Container(
+//                                     padding: EdgeInsets.all(16.w),
+//                                     decoration: BoxDecoration(
+//                                       color: Colors.white,
+//                                       shape: BoxShape.circle,
+//                                       boxShadow: [
+//                                         BoxShadow(
+//                                             color: Colors.black.withOpacity(0.2),
+//                                             blurRadius: 20,
+//                                             spreadRadius: 2)
+//                                       ],
+//                                     ),
+//                                     child: Icon(
+//                                       Icons.zoom_in,
+//                                       size: 28.w,
+//                                       color: Colors.black,
+//                                     ),
+//                                   ),
+//                                 ),
+//                               ),
+//                             ),
+//                         ],
+//                       ),
+//                     ),
+//                   ),
+//                   // Content section
+//                   Padding(
+//                     padding: EdgeInsets.all(20.w),
+//                     child: Column(
+//                       crossAxisAlignment: CrossAxisAlignment.start,
+//                       children: [
+//                         Text(
+//                           widget.item.title ?? '',
+//                           style: TextStyle(
+//                             fontSize: 18.sp,
+//                             fontWeight: FontWeight.w700,
+//                             color: Colors.black87,
+//                           ),
+//                         ),
+//                         SizedBox(height: 8.h),
+//                         // Tags
+//                         if (widget.item.tags != null &&
+//                             widget.item.tags!.isNotEmpty)
+//                           Wrap(
+//                             spacing: 8.w,
+//                             runSpacing: 8.h,
+//                             children: widget.item.tags!
+//                                 .map((tag) => Container(
+//                               padding: EdgeInsets.symmetric(
+//                                   horizontal: 10.w, vertical: 4.h),
+//                               decoration: BoxDecoration(
+//                                 color: Colors.grey[100],
+//                                 borderRadius:
+//                                 BorderRadius.circular(6.r),
+//                               ),
+//                               child: Text(
+//                                 tag,
+//                                 style: TextStyle(
+//                                   fontSize: 11.sp,
+//                                   color: Colors.grey[600],
+//                                 ),
+//                               ),
+//                             ))
+//                                 .toList(),
+//                           ),
+//                         SizedBox(height: 12.h),
+//                         // View button
+//                         AnimatedContainer(
+//                           duration: const Duration(milliseconds: 200),
+//                           decoration: BoxDecoration(
+//                             color: _isTapped
+//                                 ? Colors.blue[700]
+//                                 : Colors.blue[600],
+//                             borderRadius: BorderRadius.circular(8.r),
+//                             boxShadow: _isHovered
+//                                 ? [
+//                               BoxShadow(
+//                                 color: Colors.blue.withOpacity(0.4),
+//                                 blurRadius: 15,
+//                                 spreadRadius: 2,
+//                                 offset: Offset(0, 5),
+//                               )
+//                             ]
+//                                 : null,
+//                           ),
+//                           padding: EdgeInsets.symmetric(vertical: 10.h),
+//                           width: double.infinity,
+//                           child: Center(
+//                             child: Text(
+//                               'VIEW PROJECT',
+//                               style: TextStyle(
+//                                 fontSize: 13.sp,
+//                                 color: Colors.white,
+//                                 fontWeight: FontWeight.w600,
+//                                 letterSpacing: 0.5,
+//                               ),
+//                             ),
+//                           ),
+//                         ),
+//                       ],
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//               // Ribbon for featured items
+//               if (widget.item.isFeatured ?? false)
+//                 Positioned(
+//                   top: 0,
+//                   left: -5,
+//                   child: Container(
+//                     padding:
+//                     EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+//                     decoration: BoxDecoration(
+//                       color: Colors.amber[600],
+//                       borderRadius: BorderRadius.only(
+//                         topLeft: Radius.circular(16.r),
+//                         bottomRight: Radius.circular(16.r),
+//                       ),
+//                       boxShadow: [
+//                         BoxShadow(
+//                           color: Colors.black.withOpacity(0.1),
+//                           blurRadius: 10,
+//                           offset: Offset(0, 2),
+//                         )
+//                       ],
+//                     ),
+//                     child: Text(
+//                       'FEATURED',
+//                       style: TextStyle(
+//                         fontSize: 10.sp,
+//                         color: Colors.white,
+//                         fontWeight: FontWeight.w800,
+//                         letterSpacing: 1,
+//                       ),
+//                     ),
+//                   ),
+//                 ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+//
+//   Color _getCategoryColor(String? category) {
+//     switch (category?.toLowerCase()) {
+//       case 'web':
+//         return Colors.purple[400]!;
+//       case 'mobile':
+//         return Colors.green[500]!;
+//       case 'design':
+//         return Colors.orange[500]!;
+//       case 'branding':
+//         return Colors.red[400]!;
+//       default:
+//         return Colors.blue[500]!;
+//     }
+//   }
+// }
+
+
 // class _PortfolioItemCard extends StatefulWidget {
 //   final PortfolioModel item;
 //
