@@ -42,8 +42,6 @@ class DashboardHomeViewController extends GetxController
     super.onInit();
   }
 
-
-
   RxList<PagerModel> headerPagerList = <PagerModel>[].obs;
   Rx<PagerModel> selectedPagerData = PagerModel().obs;
 
@@ -234,7 +232,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.mobile,
       title: "Novo Cinemas",
       description:
           "Create user-friendly design and smooth working on any device platform.",
@@ -245,7 +243,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.mobile,
       title: "DrinksView",
       description:
           "Create user-friendly design and smooth working on any device platform.",
@@ -256,7 +254,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.mobile,
       title: "Dhasa - Patel Samaj",
       description:
           "Create user-friendly design and smooth working on any device platform.",
@@ -267,7 +265,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.mobile,
       title: "GloriFi",
       description:
           """GloriFi is a financial technology company, not a bank.   Banking services provided by Trans Pecos Banks, SSB, Member FDIC. The Debit Mastercard® and the World Debit Mastercard® are issued  by Trans Pecos Banks, SSB pursuant to license by Mastercard®  International Incorporated and can be used everywhere Mastercard® is accepted. Mastercard, World Debit Card, and the circle's designs are registered trademarks of  Mastercard International Incorporated. ©2022 Mastercard. All rights reserved.""",
@@ -277,7 +275,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.mobile,
       title: "GGATE",
       description:
           """GGATE is an interactive society management app that enables efficientmanagement of society's security, maintenance, staffing, bookkeeping, operations, andmore.""",
@@ -287,7 +285,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.design,
       title: "HOME AUTOMATION",
       description:
           """The name itself depicts the app which manages you home. It connectseverything in your home, and you can control all of your favourite connected homedevices, wearable from single highly customized interface.""",
@@ -296,7 +294,7 @@ class DashboardHomeViewController extends GetxController
     ));
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.web,
       title: "HA AUTOMATIONS",
       description:
           """HA Automation is provided fully automated handicap chair.We can control chairs using mobile applications. Control like we can move, up or downchair according to over requirements.""",
@@ -306,7 +304,7 @@ class DashboardHomeViewController extends GetxController
 
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.web,
       title: "POOL LAB",
       description:
           """Pool Lab is giving all the information about the swimming pool. Like waterlevel, PH level, Chlorin level ext. Also, we can change, and maintain all the parametersrelated to the swimming pool using the mobile application.""",
@@ -315,7 +313,7 @@ class DashboardHomeViewController extends GetxController
     ));
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
-      category: "MOBILE APP",
+      category: StringFile.mobile,
       title: "QR NAMASTE",
       description:
           """Qrnamste allows the Visitors to check in digitally eliminating the hecticpaperwork. Our Web-based Dashboard helps track health-related information to safelyminimize the spread of COVID-19 and also leaves a professional first impression on yourVisitors.""",

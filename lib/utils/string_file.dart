@@ -1,8 +1,17 @@
 import 'package:get/get.dart';
 
 class StringFile {
+
+
   static String appName = 'Dharmesh';
   static String label = 'Label';
+  static String all = 'All';
+  static String allRightReserved = 'Your Company. All rights reserved.';
+  static String subscriberToOurNewsLatter = 'Subscribe to our newsletter for the latest updates and offers.';
+  static String newsletter = 'Newsletter';
+  static String mobile = 'Mobile';
+  static String web = 'Web';
+  static String design = 'Design';
   static String dharmesh = 'Dharmesh';
   static String couldNotLaunch = 'Could not launch';
   static String home = 'Home';
@@ -17,7 +26,7 @@ class StringFile {
   static String footerTitle = 'Dharmesh';
   static String chooseColor = 'Choose Color';
   static String footerDescription =
-      'DigitUX is a Digital agency that creates user-centered products that help clients evolve.';
+      'Dharmesh helps businesses and startups transform their ideas into polished Flutter applications.';
   static String fileSuccessfullyDownload =
       'The file was successfully downloaded!';
   static String somethingWentWrong = 'Something went wrong';
@@ -37,10 +46,8 @@ class StringFile {
   static const String introPart2 =
       'Specializes in creating scalable mobile solutions with modern architectures and technologies.';
 
-// Key strengths header
   static const String strengthsHeader = 'Core Expertise:';
 
-// Bullet points
   static const List<String> strengthsBulletPoints = [
     'Production-ready Flutter apps (3+ years experience)',
     'State management (Getx,Bloc, Provider, Riverpod)',
@@ -49,7 +56,6 @@ class StringFile {
     'Custom responsive UI/UX implementation'
   ];
 
-// Closing section
   static const String closingPart1 =
       'Full lifecycle development - from requirements analysis to solution delivery.';
 
