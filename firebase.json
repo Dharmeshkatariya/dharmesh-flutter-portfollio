@@ -1,0 +1,35 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "dharmesh-portfollio-web-fdf8c",
+          "appId": "1:734385597166:android:03317f79cfdf57945361ff",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "dharmesh-portfollio-web-fdf8c",
+          "configurations": {
+            "android": "1:734385597166:android:03317f79cfdf57945361ff",
+            "ios": "1:734385597166:ios:1d79c319b090e5d75361ff",
+            "web": "1:734385597166:web:138cdcd42ac73ac05361ff",
+            "windows": "1:734385597166:web:43fb94b4c04971f55361ff"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "asia-east1"
+    }
+  }
+}
