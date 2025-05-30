@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vikram_portfollio_dark/utils/string_file.dart';
 import 'package:vikram_portfollio_dark/web/dashboard/widget/user_display_name_widget.dart';
 import '../../../custom_view/custom_horizontal_pager.dart';
 import '../../../custom_view/custom_web_header_tab.dart';
@@ -37,14 +38,14 @@ class HeaderWidget extends StatelessWidget {
       child: Common.isWebSize()
           ? Row(
               children: [
-                UserDisplayNameWidget(name: "Vikram", themeColor: themeColor),
+                UserDisplayNameWidget(name: StringFile.dharmesh, themeColor: themeColor),
                 SizedBox(width: 250.w),
                 Expanded(child: _pager()),
               ],
             )
           : Row(
               children: [
-                Expanded(child: UserDisplayNameWidget(name: "Vikram", themeColor: themeColor)),
+                Expanded(child: UserDisplayNameWidget(name: StringFile.dharmesh, themeColor: themeColor)),
                 mobileMenuWidget,
               ],
             ),

@@ -133,7 +133,7 @@ class HomeProfileSection extends StatelessWidget {
   Widget _animatedText() {
     return AnimatedTextWidget(
       texts: [
-        StringFile.helloImVikramAhir,
+        StringFile.helloImDharmeshAhir,
         StringFile.iamFlutterDeveloper,
         StringFile.iLoveBuildingBeautifulUI,
         StringFile.animationMakeAppsMoreFun,

@@ -71,8 +71,7 @@ class MyApp extends StatelessWidget {
   String initialRoute;
   final Map<String, String> queryParams;
 
-  MyApp(this.initialRoute, {Key? key, required this.queryParams})
-      : super(key: key);
+  MyApp(this.initialRoute, {super.key, required this.queryParams});
 
   // This widget is the root of your application.
 

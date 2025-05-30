@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
 
 class StringFile {
-  static String appName = 'PortFol';
+  static String appName = 'Dharmesh';
   static String label = 'Label';
+  static String dharmesh = 'Dharmesh';
   static String couldNotLaunch = 'Could not launch';
   static String home = 'Home';
   static String about = 'About';
@@ -13,13 +14,13 @@ class StringFile {
   static String skill = 'Skill';
   static String services = 'Services';
   static String contact = 'Contact';
-  static String footerTitle = 'Vikram';
+  static String footerTitle = 'Dharmesh';
   static String chooseColor = 'Choose Color';
   static String footerDescription = 'DigitUX is a Digital agency that creates user-centered products that help clients evolve.';
   static String fileSuccessfullyDownload = 'The file was successfully downloaded!';
   static String somethingWentWrong = 'Something went wrong';
 
-  static String helloImVikramAhir = 'Hello, I’m Vikram Ahir';
+  static String helloImDharmeshAhir = 'Hello, I’m Dharmesh Ahir';
   static String iamFlutterDeveloper = 'I am a Flutter Developer';
   static String iLoveBuildingBeautifulUI = 'I love building beautiful UI';
   static String animationMakeAppsMoreFun = 'Animations make apps more fun';
@@ -79,7 +80,7 @@ class StringFile {
   static String getInTouchWithUs = 'Get in touch with Us';
   static String needAnswersHelpJustEmail = 'Need Answers? Need help? Just email us.';
   static String yourEmail = 'Your email';
-  static String designedBy = 'Designed by Vikram Ahir 2025';
+  static String designedBy = 'Designed by Dharmesh Ahir 2025';
 
   static String roleDetails = 'Role details';
   static String roleCategories= 'Role Categories';

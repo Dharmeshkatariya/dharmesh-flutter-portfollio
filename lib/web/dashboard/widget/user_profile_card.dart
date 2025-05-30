@@ -39,7 +39,7 @@ class ProfileCard extends StatelessWidget {
           Image.asset(
               width: 350.w,
               height: 350.h,
-              AssetsIcons.vikramProfileImg,
+              AssetsIcons.dharmeshImage,
               fit: BoxFit.contain),
           if (isSocialMediaVisible) ...[
             // Positioned(

@@ -364,7 +364,7 @@ class AssetsIcons {
   static const icGoogle ='images/ic_google.svg';
   static const icCircleRound ='images/ic_circle_check.svg';
   static const icCheckBG ='images/ic_check_bg.svg';
-  static const vikramProfileImg ='assets/images/vikram.jpeg';
+  static const dharmeshImage ='assets/images/dharmesh.jpg';
   static const homeBannerImage ='assets/images/home_banner.jpg';
   static const icDribble ='assets/icons/ic_driabble.svg';
   static const icFB ='assets/icons/ic_fb.svg';

@@ -350,7 +350,7 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
       {required bool isSocialMediaVisible, required bool isBorderLess}) {
     return Obx(() {
       return ProfileCard(
-        imageUrl: AssetsIcons.vikramProfileImg,
+        imageUrl: AssetsIcons.dharmeshImage,
         isBorderLess: isBorderLess,
         isSocialMediaVisible: isSocialMediaVisible,
         mList: controller.socialMediaList.value,
