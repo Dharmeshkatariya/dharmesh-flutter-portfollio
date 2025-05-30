@@ -16,8 +16,10 @@ class StringFile {
   static String contact = 'Contact';
   static String footerTitle = 'Dharmesh';
   static String chooseColor = 'Choose Color';
-  static String footerDescription = 'DigitUX is a Digital agency that creates user-centered products that help clients evolve.';
-  static String fileSuccessfullyDownload = 'The file was successfully downloaded!';
+  static String footerDescription =
+      'DigitUX is a Digital agency that creates user-centered products that help clients evolve.';
+  static String fileSuccessfullyDownload =
+      'The file was successfully downloaded!';
   static String somethingWentWrong = 'Something went wrong';
 
   static String helloImDharmeshAhir = 'Hello, I’m Dharmesh Ahir';
@@ -25,49 +27,71 @@ class StringFile {
   static String iLoveBuildingBeautifulUI = 'I love building beautiful UI';
   static String animationMakeAppsMoreFun = 'Animations make apps more fun';
   static String letCreateSomethingAwesome = "Let's create something awesome!";
-  static String userDesc = "I'm a Freelance UI/UX Designer and Developer based in London, England. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.";
-  static String downloadCV= 'Download CV';
-  static String imProfessionalUserExperienceDesigner= 'I am Professional Flutter Developer';
-  static String userExperience =
-      'To be part of a progressive organization where I can learn new technologies and \ndifferent skill sets which can improve my knowledge.\n\n'
-      'Adept in analyzing information system needs, evaluating end-user requirements,\ncustom designing solutions, and completing application management.\n\n'
-      'Proficiency in technical documentation, design, development, and troubleshooting for \nMobile Application Development (using Java, Android Applications, Flutter.';
+  static String downloadCV = 'Download CV';
+  static String imProfessionalUserExperienceDesigner =
+      'I am Professional Flutter Developer';
 
-  static String technicalSkills= 'Technical Skills';
-  static String whatCanIDo= 'WHAT CAN I DO';
+  static const String introPart1 =
+      'Flutter Developer with 3+ years of experience building cross-platform apps for Android, iOS, and web.';
 
-  static String pHP= 'PHP';
-  static String laravel= 'LARAVEL';
-  static String html= 'HTML';
-  static String css= 'CSS';
-  static String java= 'JAVA';
-  static String android= 'ANDROID';
-  static String flutter= 'FLUTTER';
-  static String dart= 'Dart';
-  static String provider= 'Provider';
-  static String getX= 'GetX';
-  static String mySQL= 'MySQL';
-  static String git= 'GIT';
-  static String jira= 'JIRA';
-  static String graphQl= 'GraphQL';
-  static String socketIO= 'Socket.IO';
-  static String webSocket= 'Web Socket';
-  static String firebase= 'FIREBASE';
-  static String retroFit= 'Retrofit';
-  static String volley= 'Volley';
-  static String howItWorks= 'HOW IT WORKS';
-  static String threeSimpleStepsToStartYourWorkingProcess= 'Three Simple Steps To Start Your Working Process';
+  static const String introPart2 =
+      'Specializes in creating scalable mobile solutions with modern architectures and technologies.';
 
+// Key strengths header
+  static const String strengthsHeader = 'Core Expertise:';
 
+// Bullet points
+  static const List<String> strengthsBulletPoints = [
+    'Production-ready Flutter apps (3+ years experience)',
+    'State management (Getx,Bloc, Provider, Riverpod)',
+    'Firebase services (Auth, Firestore, Functions)',
+    'REST APIs & clean architecture',
+    'Custom responsive UI/UX implementation'
+  ];
+
+// Closing section
+  static const String closingPart1 =
+      'Full lifecycle development - from requirements analysis to solution delivery.';
+
+  static const String closingPart2 =
+      'Strong in performance optimization, debugging, and technical documentation.';
+  static String userDesc =
+      "Flutter Developer with 3+ years experience building cross-platform applications for Android, iOS and web. Based in Surat, India, I specialize in state management (Bloc, Provider), Firebase integration, REST APIs, and custom UI development. Passionate about creating pixel-perfect, high-performance apps with clean code architecture.";
+  static String technicalSkills = 'Technical Skills';
+  static String whatCanIDo = 'WHAT CAN I DO';
+
+  static String pHP = 'PHP';
+  static String laravel = 'LARAVEL';
+  static String html = 'HTML';
+  static String css = 'CSS';
+  static String java = 'JAVA';
+  static String android = 'ANDROID';
+  static String flutter = 'FLUTTER';
+  static String dart = 'Dart';
+  static String provider = 'Provider';
+  static String getX = 'GetX';
+  static String mySQL = 'MySQL';
+  static String git = 'GIT';
+  static String jira = 'JIRA';
+  static String graphQl = 'GraphQL';
+  static String socketIO = 'Socket.IO';
+  static String webSocket = 'Web Socket';
+  static String firebase = 'FIREBASE';
+  static String retroFit = 'Retrofit';
+  static String volley = 'Volley';
+  static String howItWorks = 'HOW IT WORKS';
+  static String threeSimpleStepsToStartYourWorkingProcess =
+      'Three Simple Steps To Start Your Working Process';
 
   static const String contactUs = 'Contact Us';
   static const String mobileNumber = '+91 8238823001';
   static const String emailAddress = ' ahir345@gmail.com ';
 
+  static String address =
+      '424, 4th Floor, Nilkanth Plaza, Yogi Chowk Ground, Chikuwadi, Nana Varachha, Surat, Gujarat 395010';
 
-  static String address = '424, 4th Floor, Nilkanth Plaza, Yogi Chowk Ground, Chikuwadi, Nana Varachha, Surat, Gujarat 395010';
-
-  static String portfolioDescription = 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
+  static String portfolioDescription =
+      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.';
 
   static const String linkedin = 'LinkedIn';
   static const String facebook = 'Facebook';
@@ -78,12 +102,13 @@ class StringFile {
   static const String github = 'GitHub';
 
   static String getInTouchWithUs = 'Get in touch with Us';
-  static String needAnswersHelpJustEmail = 'Need Answers? Need help? Just email us.';
+  static String needAnswersHelpJustEmail =
+      'Need Answers? Need help? Just email us.';
   static String yourEmail = 'Your email';
   static String designedBy = 'Designed by Dharmesh Ahir 2025';
 
   static String roleDetails = 'Role details';
-  static String roleCategories= 'Role Categories';
+  static String roleCategories = 'Role Categories';
   static String updatedOn = 'Updated On';
   static String selectVersion = 'Select version';
   static String addNewGroup = 'Add New Group';
@@ -101,8 +126,9 @@ class StringFile {
   static String subModules = "Sub Modules";
   static String entities = "Entities";
   static String editPermission = "Edit Permission";
-  static String searchByKeywordAndName  = "Search by keyword and name...";
-  static String pleaseSelectTheRoleCategory = "Please select the Role Category.";
+  static String searchByKeywordAndName = "Search by keyword and name...";
+  static String pleaseSelectTheRoleCategory =
+      "Please select the Role Category.";
   static String attributes = "Attributes";
   static String mask = "Mask";
   static String noValidaRecordsFound = "No valid records found.";
@@ -125,15 +151,20 @@ class StringFile {
   static String reasonCodeHint = "Eg: PRV-001";
   static String availableSlotsOn = "Available Slots on";
   static String searchByNameAndSpeciality = "Search by name and speciality...";
-  static String bulkUploadDescription = 'We Offer a bulk upload option\nusing our pre-built template';
-  static String templateDescription = 'Add your multiple location to the template\nand upload the file';
+  static String bulkUploadDescription =
+      'We Offer a bulk upload option\nusing our pre-built template';
+  static String templateDescription =
+      'Add your multiple location to the template\nand upload the file';
   static String clickToDownloadTemplate = 'Click here to download template';
   static String downloadTemplate = 'Click here to\ndownload template';
-  static String fileUploadFail = 'This file has failed, please delete it and upload again';
+  static String fileUploadFail =
+      'This file has failed, please delete it and upload again';
   static String noSocialHistoryAddedYet = "No Social History Added Yet.";
-  static String clickOnTheAddButtonToAddSocialHistory = "Click on the \"ADD\" button to add social history.";
+  static String clickOnTheAddButtonToAddSocialHistory =
+      "Click on the \"ADD\" button to add social history.";
   static String license = 'License';
-  static String selectLocationBeforeInsuranceErrorMessage = 'Please select a location before choosing an insurance option.';
+  static String selectLocationBeforeInsuranceErrorMessage =
+      'Please select a location before choosing an insurance option.';
   static String visitTypes = 'Visit Types';
   static String visitTypesManagement = 'Visit Types Management';
   static String visitCategories = 'Visit Categories';
@@ -142,7 +173,9 @@ class StringFile {
   static String colorCode = 'Color Code';
   static String durationMins = 'Duration\n(Mins)';
   static String thisRecordInactive = 'This Record In-active';
-  static String clickTheSameActionAgainIfYouWishToReactivateThisRecordInTheFuture = 'Click the same action again if you wish to reactivate this record in the future';
+  static String
+      clickTheSameActionAgainIfYouWishToReactivateThisRecordInTheFuture =
+      'Click the same action again if you wish to reactivate this record in the future';
   static String searchByKeyWordOrName = 'Search by keyWord or name...';
   static String editVisitCategory = 'Edit Visit Category';
   static String addVisitCategory = 'Add Visit Category';
@@ -152,9 +185,12 @@ class StringFile {
   static String visitTypeName = 'Visit Type Name';
   static String manual = 'Manual';
   static String noVisitCategoriesAddedYet = 'No Visit categories added yet';
-  static String useTheBelowFieldsToAddVisitCategories = 'Use the below fields to add visit categories';
-  static String weOfferABulkDataUploadOptionUsingOurPreBuiltTemplate = 'We offer a bulk data upload option using our pre-built template';
-  static String addYourProvidersDataToTheTemplateAndUploadTheFile = 'Add your providers data to the template and upload the file';
+  static String useTheBelowFieldsToAddVisitCategories =
+      'Use the below fields to add visit categories';
+  static String weOfferABulkDataUploadOptionUsingOurPreBuiltTemplate =
+      'We offer a bulk data upload option using our pre-built template';
+  static String addYourProvidersDataToTheTemplateAndUploadTheFile =
+      'Add your providers data to the template and upload the file';
   static String upload = 'Upload';
   static String fromSpecialty = 'From Specialty';
   static String toSpecialty = 'To Specialty';
@@ -166,22 +202,30 @@ class StringFile {
   static String setDefault = 'Set Default';
   static String setAsDefault = 'Set as Default';
   static String noVisitTypesAddedYet = 'No Visit types added yet';
-  static String useTheBelowFieldsToAddVisitTypes = 'Use the below fields to add visit types';
+  static String useTheBelowFieldsToAddVisitTypes =
+      'Use the below fields to add visit types';
   static String templateName = 'Template Name';
   static String addTemplate = 'Add Template';
   static String addNewTemplate = 'Add New Template';
   static String autoFillFields = 'Auto-Fill Fields';
-  static String autoFillFieldsMessage = 'Entering the duration and frequency fields here auto-fills the fields below, saving time. You can update any field as needed.';
-  static String thisRecord  = 'this record';
-  static String selectedUsers  = 'Selected Users';
-  static String searchForUsersToAdd  = 'Search for users to add';
-  static String searchByNPINameAndSpeciality = 'Search by NPI, name and speciality...';
-  static String clickTheSameActionAgainIfYouWishToReactivateThisRecord  = 'Click the same action again if you wish to reactivate this record in the future.';
+  static String autoFillFieldsMessage =
+      'Entering the duration and frequency fields here auto-fills the fields below, saving time. You can update any field as needed.';
+  static String thisRecord = 'this record';
+  static String selectedUsers = 'Selected Users';
+  static String searchForUsersToAdd = 'Search for users to add';
+  static String searchByNPINameAndSpeciality =
+      'Search by NPI, name and speciality...';
+  static String clickTheSameActionAgainIfYouWishToReactivateThisRecord =
+      'Click the same action again if you wish to reactivate this record in the future.';
 
-  static String provideRelevantInfoMessage = 'Please provide the relevant information as requested. We aim to make your onboarding process smooth and efficient.';
-  static String multipleHealthCenterQuestion = 'Do you have more than one health center?';
-  static String multipleLocationQuestion = 'Do you have more than one practice location?';
-  static String multipleProviderQuestion = 'Do you have more than one provider?';
+  static String provideRelevantInfoMessage =
+      'Please provide the relevant information as requested. We aim to make your onboarding process smooth and efficient.';
+  static String multipleHealthCenterQuestion =
+      'Do you have more than one health center?';
+  static String multipleLocationQuestion =
+      'Do you have more than one practice location?';
+  static String multipleProviderQuestion =
+      'Do you have more than one provider?';
   static String locationShortCode = 'Short Practice Location Code';
   static String enterValidPhoneNumber = 'Please enter valid phone number.';
   static String invalidNumber = 'Invalid number.';
@@ -194,53 +238,77 @@ class StringFile {
   static String fullName = 'Full Name';
   static String practiseUsers = 'Practise Users';
   static String detailsProvidedIncorrect = 'Details provided is incorrect';
-  static String pleaseSelectAtLeastOneProvider = 'Please select at least one provider.';
+  static String pleaseSelectAtLeastOneProvider =
+      'Please select at least one provider.';
   static String pleaseEnterGroupName = 'Please enter Group Name.';
-  static String userGroupSuccessfullyCreated = 'User Group successfully created.';
-  static String userGroupSuccessfullyUpdated = 'User Group successfully updated.';
-  static String reasonSpecialistNotAvailableWithin = 'Eg: Specialist not available within the network';
-  static String noVisitTypesShowingRightNow = 'No visit types showing right now.!';
-  static String selectASpecializationAndTheCorrespondingProviderFromTheListToAssignVisitTypes = 'Select a specialization and the corresponding provider from the list to assign visit types.';
+  static String userGroupSuccessfullyCreated =
+      'User Group successfully created.';
+  static String userGroupSuccessfullyUpdated =
+      'User Group successfully updated.';
+  static String reasonSpecialistNotAvailableWithin =
+      'Eg: Specialist not available within the network';
+  static String noVisitTypesShowingRightNow =
+      'No visit types showing right now.!';
+  static String
+      selectASpecializationAndTheCorrespondingProviderFromTheListToAssignVisitTypes =
+      'Select a specialization and the corresponding provider from the list to assign visit types.';
   static String allProviders = 'All Providers';
   static String searchForTheProviderInThe = 'Search for the provider in the';
   static String copyFrom = 'Copy From';
-  static String optionAndThenLocateTheProviderInThe = 'option, and then locate the provider in the';
+  static String optionAndThenLocateTheProviderInThe =
+      'option, and then locate the provider in the';
   static String copyTo = 'Copy To';
-  static String optionToAssignTheVisitTypes = 'option to assign the visit types.';
-  static String theSystemWillAutomaticallyCopyAllVisitTypesFromThe = 'The system will automatically copy all visit types from the';
-  static String optionAndAssignThemToTheSelectedProvidersInThe = 'option and assign them to the selected providers in the';
+  static String optionToAssignTheVisitTypes =
+      'option to assign the visit types.';
+  static String theSystemWillAutomaticallyCopyAllVisitTypesFromThe =
+      'The system will automatically copy all visit types from the';
+  static String optionAndAssignThemToTheSelectedProvidersInThe =
+      'option and assign them to the selected providers in the';
   static String option = 'option';
-  static String copyVisitTypeMessage = 'Search for the provider in the "Copy From" option, and then locate the provider in the "Copy To" option to assign the visit types.';
+  static String copyVisitTypeMessage =
+      'Search for the provider in the "Copy From" option, and then locate the provider in the "Copy To" option to assign the visit types.';
   static String assignVisitTypes = 'Assign Visit Types';
   static String skipNext = 'Skip & Next';
   static String skipConfirm = 'Skip & Confirm';
-  static String refineYourSearchCriteria = 'No exact matches found. Try adjusting filters or expanding the location range!';
+  static String refineYourSearchCriteria =
+      'No exact matches found. Try adjusting filters or expanding the location range!';
   static String employmentDetails = 'Employment Details';
   static String meetingTitle = 'Meeting Title';
   static String titleHere = 'Title here...';
   static String editRole = 'Edit Role';
   static String billSummarySentToSms = 'A bill summary was delivered by SMS.';
-  static String billSummarySentToEmail = 'A bill summary was delivered by Email.';
+  static String billSummarySentToEmail =
+      'A bill summary was delivered by Email.';
   static String billPayments = 'Bill Payments';
   static String pleaseEnterTheMesage = 'Please enter the Message';
-  static String reminderSentSuccessFully = 'The reminder was sent successfully.';
+  static String reminderSentSuccessFully =
+      'The reminder was sent successfully.';
   static String downloadBillSummary = 'Download the bill summary';
   static String billSummaryStatic = 'Bill summary';
   static String backToBillPay = 'Back to Bill Pay';
   static String invoiceID = 'Invoice ID';
   static String invoiceDate = 'Invoice Date';
   static String addInvoice = 'Add Invoice';
-  static String userIsCreatedAndLinkIsSentToEmail = 'User is created and link is sent to email.';
-  static String userInfoHasBeenSuccessfullyUpdated = 'User information has been successfully updated.';
+  static String userIsCreatedAndLinkIsSentToEmail =
+      'User is created and link is sent to email.';
+  static String userInfoHasBeenSuccessfullyUpdated =
+      'User information has been successfully updated.';
 
-  static String referralPreferencesSuccessfullyCreated = 'Referral Preferences successfully created.';
-  static String referralPreferencesSuccessfullyUpdates = 'Referral Preferences successfully updates.';
-  static String referralReasonSuccessfullyCreated = 'Referral Reason successfully created.';
-  static String referralReasonSuccessfullyUpdates = 'Referral Reason successfully updates.';
-  static String pleaseEnterTheReferralPreferences = 'Please enter the Referral Preferences.';
+  static String referralPreferencesSuccessfullyCreated =
+      'Referral Preferences successfully created.';
+  static String referralPreferencesSuccessfullyUpdates =
+      'Referral Preferences successfully updates.';
+  static String referralReasonSuccessfullyCreated =
+      'Referral Reason successfully created.';
+  static String referralReasonSuccessfullyUpdates =
+      'Referral Reason successfully updates.';
+  static String pleaseEnterTheReferralPreferences =
+      'Please enter the Referral Preferences.';
   static String specializations = 'Specializations';
-  static String pleaseSelectThePrimaryLocation = 'Please select the Primary Location.';
-  static String pleaseSelectThePrimaryInsurance = 'Please select the Primary Insurance.';
+  static String pleaseSelectThePrimaryLocation =
+      'Please select the Primary Location.';
+  static String pleaseSelectThePrimaryInsurance =
+      'Please select the Primary Insurance.';
 
   static String policyManagement = 'Policy Management';
   static String policyAccess = 'Policy Access';
@@ -261,12 +329,17 @@ class StringFile {
   static String quickJoin = 'Quick Join';
   static String shareWithTeam = 'Share with Team';
   static String pleaseEnterTheName = 'Please enter the Name.';
-  static String pleaseSelectTheReferralFrom = 'Please select the Referral From.';
+  static String pleaseSelectTheReferralFrom =
+      'Please select the Referral From.';
   static String pleaseSelectTheReferralTo = 'Please select the Referral To.';
-  static String pleaseSelectTheReferralPreference = 'Please select the Referral Preference.';
-  static String pleaseSelectTheReferralPreferenceReason = 'Please select the Referral Preference Reason.';
-  static String pleaseSelectTheReferralReason = 'Please select the Referral Reason.';
-  static String pleaseSelectTheReferralSubReason = 'Please select the Referral Sub Reason.';
+  static String pleaseSelectTheReferralPreference =
+      'Please select the Referral Preference.';
+  static String pleaseSelectTheReferralPreferenceReason =
+      'Please select the Referral Preference Reason.';
+  static String pleaseSelectTheReferralReason =
+      'Please select the Referral Reason.';
+  static String pleaseSelectTheReferralSubReason =
+      'Please select the Referral Sub Reason.';
   static String editReferral = 'Edit Referral';
   static String organizationText = 'Organization';
   static String followUpConsultationWith = 'Follow-up Consultation with';
@@ -286,7 +359,8 @@ class StringFile {
   static String purposeOfTheCall = 'Purpose of the call';
   static String hostManagement = 'Host Management';
   static String manageFaceMeet = 'Manage FaceMeet';
-  static String letsYouRestrictWhatContributorsCanDoInTheMeeting = 'Lets you restrict what contributors can do in the meeting.';
+  static String letsYouRestrictWhatContributorsCanDoInTheMeeting =
+      'Lets you restrict what contributors can do in the meeting.';
   static String searchParticipants = 'Search Participants';
   static String yourCameraIsTurnedOff = 'Your camera is turned off';
   static String cameraOn = 'Camera on';
@@ -299,7 +373,8 @@ class StringFile {
   static String stopScreenSharing = 'Stop screen sharing';
   static String joinNow = 'Join Now';
   static String readyToJoinFaceMeet = 'Ready To Join FaceMeet?';
-  static String failedToUpdatePatientInsurance = 'Failed to update patient insurance.';
+  static String failedToUpdatePatientInsurance =
+      'Failed to update patient insurance.';
   static String failedToCreateInsurance = 'Failed to Create insurance';
   static String leave = 'Leave';
   static String visualEffects = 'Visual Effects';
@@ -318,7 +393,8 @@ class StringFile {
   static String diagnosisCodesGroup = 'Diagnosis Codes Group';
   static String payOnline = 'Pay Online';
   static String payViaTerminal = 'Pay Via Terminal';
-  static String thePaymentDetailsOfPaymentID = 'The payment details of payment ID';
+  static String thePaymentDetailsOfPaymentID =
+      'The payment details of payment ID';
   static String hasBeenSentToTheDevice = 'has been sent to the device';
   static String denied = 'Denied';
   static String underReview = 'Under Review';
@@ -345,19 +421,27 @@ class StringFile {
   static String writeOff = 'Write-Off';
   static String paymentPlans = 'Payment Plans';
   static String payFull = 'Pay Full';
-  static String payMonthly= 'Pay Monthly';
-  static String paymentLink= 'Payment Link';
-  static String paymentDueDate= 'Payment Due Date';
-  static String twelveMonths= '12 Months';
-  static String providerLoginTitle = 'HelixDoc is the advanced\npractice management system';
-  static String patientLoginTitle = 'Get all these benefits, completely free with HelixDoc';
-  static String providerLoginContent1 = 'Manage payments on all patient accounts.';
+  static String payMonthly = 'Pay Monthly';
+  static String paymentLink = 'Payment Link';
+  static String paymentDueDate = 'Payment Due Date';
+  static String twelveMonths = '12 Months';
+  static String providerLoginTitle =
+      'HelixDoc is the advanced\npractice management system';
+  static String patientLoginTitle =
+      'Get all these benefits, completely free with HelixDoc';
+  static String providerLoginContent1 =
+      'Manage payments on all patient accounts.';
   static String providerLoginContent2 = 'Oversee administration functions.';
-  static String providerLoginContent3 = 'Manage claims filing, tracking and reporting';
-  static String providerLoginContent4 = 'Manage patient registration & appointments.';
-  static String patientLoginContent1 = 'Convenient access to appointment notes from your provider';
-  static String patientLoginContent2 = 'Easily manage appointments and prescriptions within your portal';
-  static String patientLoginContent3 = 'Personalized help from the HelixDoc Care team';
+  static String providerLoginContent3 =
+      'Manage claims filing, tracking and reporting';
+  static String providerLoginContent4 =
+      'Manage patient registration & appointments.';
+  static String patientLoginContent1 =
+      'Convenient access to appointment notes from your provider';
+  static String patientLoginContent2 =
+      'Easily manage appointments and prescriptions within your portal';
+  static String patientLoginContent3 =
+      'Personalized help from the HelixDoc Care team';
   static String signIntoHelixDoc = 'Sign into HelixDoc';
   static String payment = 'Payment';
   static String backToBills = 'Back to Bills';
@@ -370,8 +454,10 @@ class StringFile {
   static String savePaymentOption = 'Save payment option';
   static String defaultPaymentOption = 'Default payment option';
   static String terminalDevice = 'Terminal Device - D1';
-  static String saveTimeByChoosingPaymentOptionSaved = '1. Save time by choosing a payment option as saved.';
-  static String weOfferMultiplePaymentOptions = '2. We offer multiple payment options, allowing you to split payments across different methods.';
+  static String saveTimeByChoosingPaymentOptionSaved =
+      '1. Save time by choosing a payment option as saved.';
+  static String weOfferMultiplePaymentOptions =
+      '2. We offer multiple payment options, allowing you to split payments across different methods.';
   static String typeOfService = 'Type of Service';
   static String pricePerUnit = 'Price/Unit';
   static String insuranceAmt = 'Insurance Amt.';

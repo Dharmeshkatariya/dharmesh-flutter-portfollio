@@ -65,15 +65,12 @@ class HomeProfileSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               _animatedText(),
               _commonHeight(),
               _commonHeight(),
               _descText(),
               _commonHeight(),
               _commonHeight(),
-
-
               if (downloadCvButton != null) ...[
                 downloadCvButton ?? Container()
               ],

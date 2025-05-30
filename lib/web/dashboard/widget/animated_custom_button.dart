@@ -13,13 +13,14 @@ class AnimatedCustomButton extends StatelessWidget {
     this.assetIcons,
     required this.text,
     this.width = 130,
-    this.height = 40,
+    this.height = 40, required this.onTap,
   });
 
   final String? assetIcons;
   final String text;
   final double width;
   final double height;
+  final Function onTap ;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,9 @@ class AnimatedCustomButton extends StatelessWidget {
 
     return Obx(() {
       return GestureDetector(
+        onTap: (){
+          onTap();
+        },
         onTapDown: (_) => isPressed.value = true,
         onTapUp: (_) => isPressed.value = false,
         onTapCancel: () => isPressed.value = false,

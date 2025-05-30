@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:vikram_portfollio_dark/custom_view/custom_info_widget.dart';
 import '../../../custom_view/border_container.dart';
 import '../../../custom_view/custom_text.dart';
 import '../../../utils/app_text_styles.dart';
@@ -34,7 +35,13 @@ class UserInfoSection extends StatelessWidget {
     return ClipPath(
         clipper: BottomCurveClipper(),
         child: Container(
-          height: Common.isWebSize() ? 450.h : null,
+          constraints: Common.isWebSize()
+              ? BoxConstraints(
+                  minHeight: 500.h,
+                  maxWidth: double.infinity,
+                )
+              : null,
+          // height: Common.isWebSize() ? 450.h : null,
           child: BorderContainer(
             width: double.infinity,
             padding: padding,
@@ -55,16 +62,23 @@ class UserInfoSection extends StatelessWidget {
   }
 
   Widget _commonView() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _professinal(),
-        _commonHeight(height: 20.h),
-        _userExperience(),
-        _commonHeight(height: 20.h),
-        if (downloadCvButton != null) ...[downloadCvButton ?? Container()],
-        _commonHeight(height: 40.h),
-      ],
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: 300.w,
+        maxWidth: 600.w,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _professinal(),
+          SizedBox(height: 20.h),
+          _userExperience(),
+          SizedBox(height: 20.h),
+          if (downloadCvButton != null) downloadCvButton!,
+          SizedBox(height: 40.h),
+        ],
+      ),
     );
   }
 
@@ -77,11 +91,39 @@ class UserInfoSection extends StatelessWidget {
   }
 
   Widget _userExperience() {
-    return CustomTextView(
-      StringFile.userExperience,
-      style: AppTextStyles.regularBlack16.copyWith(
-        overflow: TextOverflow.visible,
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildParagraph(StringFile.introPart1),
+        _buildParagraph(StringFile.introPart2),
+        const SizedBox(height: 24),
+        CustomTextView(
+          StringFile.strengthsHeader,
+          style: AppTextStyles.regularBlack16.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 12),
+        CustomInfoWidget(
+          items: StringFile.strengthsBulletPoints,
+          textStyle: AppTextStyles.regularBlack16,
+          bulletColor: ColorFile.webThemeColor,
+        ),
+        const SizedBox(height: 24),
+
+        // Closing
+        _buildParagraph(StringFile.closingPart1),
+        _buildParagraph(StringFile.closingPart2),
+      ],
+    );
+  }
+
+  Widget _buildParagraph(String text) {
+    return CustomInfoWidget(
+      items: [text], // Single item list
+      isBulletList: false, // No bullets for paragraphs
+      textStyle: AppTextStyles.regularBlack16,
+      spacing: 12,
     );
   }
 

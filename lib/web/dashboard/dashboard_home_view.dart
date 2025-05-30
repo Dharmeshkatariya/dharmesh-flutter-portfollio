@@ -83,7 +83,7 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
   Widget _header() {
     return Obx(() {
       return FadeInDown(
-        duration:  const Duration(milliseconds: 500) ,
+        duration: const Duration(milliseconds: 500),
         child: HeaderWidget(
             themeColor: controller.selectedColor.value,
             paddingHorizontal: _commonPadding(),
@@ -94,7 +94,7 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
                 height: 24.h,
                 width: 24.h,
                 colorFilter:
-                     ColorFilter.mode(ColorFile.webThemeColor, BlendMode.srcIn),
+                    ColorFilter.mode(ColorFile.webThemeColor, BlendMode.srcIn),
               ),
             ),
             mList: controller.headerPagerList.value,
@@ -158,9 +158,7 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
-        children: [
-
-          _header(), Expanded(child: _webBody())],
+        children: [_header(), Expanded(child: _webBody())],
       ),
     );
   }
@@ -201,7 +199,6 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
     return Obx(() {
       return BounceInUp(
         duration: const Duration(milliseconds: 600),
-
         child: FooterWidget(
           key: controller.headerPagerList.value[5].globalKey,
           footerAboutList: controller.headerPagerList,
@@ -226,7 +223,7 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
   }
 
   Widget _profileInfo() {
-    return  FadeInLeft(
+    return FadeInLeft(
       duration: controller.animationDuration(),
       delay: controller.animationDelay(),
       animate: true,
@@ -291,12 +288,7 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
                 ),
                 _commonHeight(),
                 _commonHeight(),
-                CustomTextView(
-                  StringFile.userExperience,
-                  style: AppTextStyles.regularBlack16.copyWith(
-                    overflow: TextOverflow.visible,
-                  ),
-                ),
+
                 _commonHeight(),
                 _commonHeight(),
                 _downloadCv(),
@@ -309,7 +301,6 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
   }
 
   Widget _technicalSkillSection() {
-
     return TechnicalSkillSection(
       padding: _commonPadding(),
       scrollController: controller.pageScrollController,
@@ -338,6 +329,9 @@ class DashboardHomeView extends GetView<DashboardHomeViewController> {
       text: StringFile.downloadCV,
       width: 140.w,
       height: 40,
+      onTap: () {
+        controller.clickOnDownload();
+      },
     );
     // return ColorGlowEffect(
     //   child: WebCustomButtonWithBG(width: 140.w, StringFile.downloadCV, 40, () {
