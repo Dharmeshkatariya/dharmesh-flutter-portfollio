@@ -79,7 +79,7 @@ class FooterWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(child: _vikramTitleSection()),
+          Expanded(child: _titleSection()),
           SizedBox(width: 25.w),
           Expanded(child: _aboutSection()),
           SizedBox(width: 25.w),
@@ -99,7 +99,7 @@ class FooterWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _vikramTitleSection(),
+          _titleSection(),
           SizedBox(height: 20.h),
           _aboutSection(),
           SizedBox(height: 20.h),
@@ -113,7 +113,7 @@ class FooterWidget extends StatelessWidget {
     );
   }
 
-  Widget _vikramTitleSection() {
+  Widget _titleSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -158,7 +158,7 @@ class FooterWidget extends StatelessWidget {
                 ),
               ),
             )
-            .toList(),
+            ,
       ],
     );
   }
@@ -202,7 +202,7 @@ class FooterWidget extends StatelessWidget {
                 ),
               ),
             )
-            .toList(),
+            ,
       ],
     );
   }
@@ -249,7 +249,7 @@ class FooterWidget extends StatelessWidget {
                 ),
               ),
             )
-            .toList(),
+            ,
       ],
     );
   }

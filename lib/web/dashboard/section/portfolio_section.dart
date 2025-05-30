@@ -1,60 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../../custom_view/border_container.dart';
-import '../../../custom_view/custom_text.dart';
 import '../../../model/portfolio_model.dart';
-import '../../../utils/app_text_styles.dart';
-import '../../../utils/color_file.dart';
-import '../../../utils/common.dart';
-import '../../../utils/string_file.dart';
-import '../widget/portfolio_card_widget.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../custom_view/border_container.dart';
-import '../../../custom_view/custom_text.dart';
-import '../../../model/portfolio_model.dart';
-import '../../../utils/app_text_styles.dart';
-import '../../../utils/color_file.dart';
-import '../../../utils/common.dart';
-import '../widget/portfolio_card_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../custom_view/border_container.dart';
-import '../../../custom_view/custom_text.dart';
-import '../../../custom_view/web_custom_button_with_border.dart';
-import '../../../model/portfolio_model.dart';
-import '../../../utils/app_text_styles.dart';
-import '../hover_effect/slide_zoom_effect.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../custom_view/border_container.dart';
-import '../../../custom_view/custom_text.dart';
-import '../../../model/portfolio_model.dart';
-import '../../../utils/app_text_styles.dart';
-import '../../../utils/color_file.dart';
-import '../../../utils/common.dart';
-import '../../../utils/string_file.dart';
-import '../widget/portfolio_card_widget.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../model/portfolio_model.dart';
-
 class PortfolioSection extends StatefulWidget {
   final List<PortfolioModel> portfolioList;
   final EdgeInsetsGeometry horizontalPadding;
 
   const PortfolioSection({
-    Key? key,
+    super.key,
     required this.portfolioList,
     required this.horizontalPadding,
-  }) : super(key: key);
+  });
 
   @override
   State<PortfolioSection> createState() => _PortfolioSectionState();
@@ -432,7 +388,7 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
                                   color: Colors.blue.withOpacity(0.4),
                                   blurRadius: 15,
                                   spreadRadius: 2,
-                                  offset: Offset(0, 5),
+                                  offset: const Offset(0, 5),
                                 )
                               ]
                                   : null,
@@ -515,12 +471,11 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
                   Colors.transparent,
                   Colors.black.withOpacity(0.7),
                 ],
-                stops: [0.6, 1],
+                stops: const [0.6, 1],
               ),
             ),
           ),
         ),
-        // Category chip
         Positioned(
           top: 16,
           right: 16,
@@ -534,7 +489,7 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),
                   blurRadius: 10,
-                  offset: Offset(0, 4),
+                  offset: const Offset(0, 4),
                 )
               ],
             ),
@@ -565,7 +520,7 @@ class _PortfolioItemCardState extends State<_PortfolioItemCard> {
                   BoxShadow(
                     color: Colors.black.withOpacity(0.1),
                     blurRadius: 10,
-                    offset: Offset(0, 2),
+                    offset: const Offset(0, 2),
                   )
                 ],
               ),
