@@ -8,6 +8,7 @@ import '../../../utils/assets_icons.dart';
 import '../../../utils/color_file.dart';
 import '../../../utils/common.dart';
 import '../../../utils/string_file.dart';
+import '../animation/shape_animation.dart';
 import '../clipper/step_painter.dart';
 import '../hover_effect/lift_shadow_effect.dart';
 import '../widget/triangle_animation_widget.dart';
@@ -20,7 +21,10 @@ class ServiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Common().setScreenUtilDesignSize(context);
-    return TriangleAnimationWidget(
+    return ShapeAnimationWidget(
+      primaryColor: ColorFile.webThemeColor,
+      secondaryColor: ColorFile.webSecondThemeColor,
+
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.w),
         child: Column(

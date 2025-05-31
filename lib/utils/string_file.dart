@@ -65,12 +65,25 @@ class StringFile {
       "Flutter Developer with 3+ years experience building cross-platform applications for Android, iOS and web. Based in Surat, India, I specialize in state management (Bloc, Provider), Firebase integration, REST APIs, and custom UI development. Passionate about creating pixel-perfect, high-performance apps with clean code architecture.";
   static String technicalSkills = 'Technical Skills';
   static String whatCanIDo = 'WHAT CAN I DO';
-  static const String planningTitle = 'Planning';
-  static const String planningDescription = 'Planning is essential as it helps structure the project.';
-  static const String developmentTitle = 'Development';
-  static const String developmentDescription = 'This phase involves coding and implementation.';
-  static const String launchingTitle = 'Launching';
-  static const String launchingDescription = 'The final stage where the project is launched.';
+
+  // In your StringFile.dart
+  static const String planningTitle = 'Strategic Planning';
+  static const String planningDescription =
+      'We collaborate with you to define clear objectives and create a roadmap that aligns with your business goals, ensuring every step moves you closer to success.';
+
+  static const String developmentTitle = 'Seamless Development';
+  static const String developmentDescription =
+      'Our expert team builds your solution with cutting-edge technology, maintaining transparent communication throughout the process to deliver exactly what you need.';
+
+  static const String launchingTitle = 'Successful Launch';
+  static const String launchingDescription =
+      'We don\'t just deploy your project - we ensure it\'s fully optimized, tested, and ready to deliver real results from day one, with ongoing support available.';
+
+// Bonus: You might want to add these for the section headers
+  static const String howItWorks = 'Our Process for Your Success';
+  static const String threeSimpleSteps =
+      'A streamlined approach designed to deliver maximum value with minimal disruption to your business';
+
   static String pHP = 'PHP';
   static String laravel = 'LARAVEL';
   static String html = 'HTML';
@@ -90,7 +103,6 @@ class StringFile {
   static String firebase = 'FIREBASE';
   static String retroFit = 'Retrofit';
   static String volley = 'Volley';
-  static String howItWorks = 'HOW IT WORKS';
   static String threeSimpleStepsToStartYourWorkingProcess =
       'Three Simple Steps To Start Your Working Process';
 
