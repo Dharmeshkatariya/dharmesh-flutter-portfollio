@@ -81,11 +81,6 @@ class TechnicalSkillSection extends StatelessWidget {
     return _skillsSection(context);
   }
 
-  // SlideTransitionWrapper(
-  //   direction: SlideDirection.up,
-  //   controller: _animationController,
-  //   child: widget.leftChild!,
-  // );
 
   Widget _skillsSection(BuildContext context) {
     return Column(
@@ -139,63 +134,5 @@ class TechnicalSkillSection extends StatelessWidget {
     );
   }
 
-  Widget _technicalSkills() {
-    return Padding(
-      padding: padding,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomTextView(
-            "Technical Skills",
-            style: AppTextStyles.semiBoldBlack40
-                .copyWith(color: ColorFile.webThemeColor),
-          ),
-          _commonHeight(height: 20.h),
-          _skillsList(),
-        ],
-      ),
-    );
-  }
 
-  Widget _commonWidth({double? width}) {
-    return SizedBox(width: width ?? 10.w);
-  }
-
-  Widget _commonHeight({double? height}) {
-    return SizedBox(height: height ?? 10.h);
-  }
-
-  Widget _skillsList() {
-    List<String> skills = [
-      "JAVA, ANDROID, FLUTTER, Dart, Provider, GetX",
-      "MySQL, GIT, JIRA, GraphQL, Socket.IO, Web Socket",
-      "FIREBASE, Retrofit, Volley",
-      "Development Tools: Android Studio",
-      "Operating Systems: Windows and MAC OS",
-      "Version Control Systems: GIT",
-    ];
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: skills
-          .map((skill) => Padding(
-                padding: EdgeInsets.only(bottom: 8.h),
-                child: Row(
-                  children: [
-                    Icon(Icons.check, color: ColorFile.webThemeColor, size: 20),
-                    _commonWidth(width: 10.w),
-                    Expanded(
-                      child: CustomTextView(
-                        skill,
-                        style: AppTextStyles.regularBlack16.copyWith(
-                          overflow: TextOverflow.visible,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ))
-          .toList(),
-    );
-  }
 }
