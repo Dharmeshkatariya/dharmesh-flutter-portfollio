@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import '../../../custom_view/border_container.dart';
 import '../../../custom_view/custom_text.dart';
 import '../../../utils/app_text_styles.dart';
+import '../../../utils/assets_icons.dart';
 import '../../../utils/color_file.dart';
 import '../../../utils/common.dart';
 import '../../../utils/string_file.dart';
@@ -33,7 +35,6 @@ class ServiceSection extends StatelessWidget {
               style: AppTextStyles.regularBlack14,
             ),
             SizedBox(height: 20.h),
-            SizedBox(height: 20.h),
             Container(
                 padding: padding,
                 child: _buildStepsLayout(isWeb: Common.isWebSize())),
@@ -46,12 +47,24 @@ class ServiceSection extends StatelessWidget {
 
   Widget _buildStepsLayout({required bool isWeb}) {
     List<Widget> steps = [
-      _buildStep("01", Icons.lightbulb, "Planning",
-          "Planning is essential as it helps structure the project."),
-      _buildStep("02", Icons.rocket_launch, "Development",
-          "This phase involves coding and implementation."),
-      _buildStep("03", Icons.check_circle, "Launching",
-          "The final stage where the project is launched."),
+      _buildStep(
+        "01",
+        AssetsIcons.marketingAnimation,
+        StringFile.planningTitle,
+        StringFile.planningDescription,
+      ),
+      _buildStep(
+        "02",
+        AssetsIcons.webDesignAnimation,
+        StringFile.developmentTitle,
+        StringFile.developmentDescription,
+      ),
+      _buildStep(
+        "03",
+        AssetsIcons.launchingAnimation,
+        StringFile.launchingTitle,
+        StringFile.launchingDescription,
+      ),
     ];
 
     return isWeb
@@ -75,21 +88,29 @@ class ServiceSection extends StatelessWidget {
     );
   }
 
-
   Widget _buildStep(
-      String number, IconData icon, String title, String description) {
+      String number, String animationPath, String title, String description) {
     return LiftShadowEffect(
       child: BorderContainer(
         width: double.infinity,
         child: Column(
           children: [
-            CustomPaint(
-              size: const Size(80, 80),
-              painter: StepPainter(
-                circleColor: ColorFile.webThemeColor.withOpacity(0.1),
-                borderColor: ColorFile.webThemeColor,
-                number: number,
-                icon: icon,
+            SizedBox(
+              width: 250,
+              height: 250,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  SizedBox(
+                    width: 250,
+                    height: 250,
+                    child: Lottie.asset(
+                      animationPath,
+                      fit: BoxFit.contain,
+                      repeat: true,
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 10.h),
@@ -97,12 +118,13 @@ class ServiceSection extends StatelessWidget {
             const SizedBox(height: 5),
             SizedBox(
               width: 200,
-              child: CustomTextView(description,
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.regularBlack14
-                      .copyWith(color: ColorFile.grayColor)),
+              child: CustomTextView(
+                description,
+                textAlign: TextAlign.center,
+                style: AppTextStyles.regularBlack14
+                    .copyWith(color: ColorFile.grayColor),
+              ),
             ),
-            SizedBox(height: 10.h),
             SizedBox(height: 10.h),
           ],
         ),

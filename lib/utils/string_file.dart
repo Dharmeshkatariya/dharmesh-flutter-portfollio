@@ -65,7 +65,12 @@ class StringFile {
       "Flutter Developer with 3+ years experience building cross-platform applications for Android, iOS and web. Based in Surat, India, I specialize in state management (Bloc, Provider), Firebase integration, REST APIs, and custom UI development. Passionate about creating pixel-perfect, high-performance apps with clean code architecture.";
   static String technicalSkills = 'Technical Skills';
   static String whatCanIDo = 'WHAT CAN I DO';
-
+  static const String planningTitle = 'Planning';
+  static const String planningDescription = 'Planning is essential as it helps structure the project.';
+  static const String developmentTitle = 'Development';
+  static const String developmentDescription = 'This phase involves coding and implementation.';
+  static const String launchingTitle = 'Launching';
+  static const String launchingDescription = 'The final stage where the project is launched.';
   static String pHP = 'PHP';
   static String laravel = 'LARAVEL';
   static String html = 'HTML';

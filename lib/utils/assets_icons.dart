@@ -382,6 +382,14 @@ class AssetsIcons {
   static const String icLocationFill = 'assets/images/icon_location_fill.svg';
 
 
+
+  static const String icLinkSvg = 'assets/images/ic_link.svg';
+  static const String icLinkSvgTwo = 'assets/images/ic_link_two.svg';
+
+
   static const String settingAnimation = 'assets/animation/setting.json';
+  static const String launchingAnimation = 'assets/animation/launching.json';
+  static const String marketingAnimation = 'assets/animation/marketing.json';
+  static const String webDesignAnimation = 'assets/animation/web_design.json';
 
 }
