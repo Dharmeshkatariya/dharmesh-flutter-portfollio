@@ -169,11 +169,12 @@ class DashboardHomeViewController extends GetxController
     );
     socialMediaList.add(
       SocialMediaModel(
-          displayText: StringFile.dribbble,
-          svgPath: AssetsIcons.icDribble,
+          displayText: StringFile.github,
+          svgPath: AssetsIcons.icFB,
           link: "https://www.mtzinfotech.com/",
           isSelected: true.obs),
     );
+
     socialMediaList.add(
       SocialMediaModel(
           displayText: StringFile.instagram,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vikram_portfollio_dark/web/dashboard/animation/slide_animation.dart';
+import 'package:dharmesh_portfollio/web/dashboard/animation/slide_animation.dart';
 
 class VisibilityAnimationWrapper extends StatefulWidget {
   final Widget child;

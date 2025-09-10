@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vikram_portfollio_dark/utils/string_file.dart';
-import 'package:vikram_portfollio_dark/web/dashboard/widget/user_display_name_widget.dart';
+import 'package:dharmesh_portfollio/utils/string_file.dart';
+import 'package:dharmesh_portfollio/web/dashboard/widget/user_display_name_widget.dart';
 import '../../../custom_view/custom_horizontal_pager.dart';
 import '../../../custom_view/custom_web_header_tab.dart';
 import '../../../utils/color_file.dart';

@@ -5,11 +5,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:toastification/toastification.dart';
-import 'package:vikram_portfollio_dark/routes/routes.dart';
-import 'package:vikram_portfollio_dark/utils/color_file.dart';
-import 'package:vikram_portfollio_dark/utils/constants_file.dart';
-import 'package:vikram_portfollio_dark/utils/my_custom_scroll_behavior.dart';
-import 'package:vikram_portfollio_dark/utils/shared_pref.dart';
+import 'package:dharmesh_portfollio/routes/routes.dart';
+import 'package:dharmesh_portfollio/utils/color_file.dart';
+import 'package:dharmesh_portfollio/utils/constants_file.dart';
+import 'package:dharmesh_portfollio/utils/my_custom_scroll_behavior.dart';
+import 'package:dharmesh_portfollio/utils/shared_pref.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -13,11 +13,9 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:vikram_portfollio_dark/utils/shared_pref.dart';
-import 'package:vikram_portfollio_dark/utils/string_file.dart';
+import 'package:dharmesh_portfollio/utils/shared_pref.dart';
+import 'package:dharmesh_portfollio/utils/string_file.dart';
 
-import '../api/request_and_response_params.dart';
-import '../custom_view/custom_horizontal_pager.dart';
 import '../custom_view/custom_text.dart';
 import '../enum/bill_pay_currency.dart';
 import '../enum/display_date_type.dart';
@@ -33,8 +31,6 @@ class Common {
   String buildVersion = "v1.1(030222)"; // for Apk Build Version
   OverlayEntry? overlayEntry;
   static String tempToken = ''; //temp token for create password for new user
-
-
 
   toastShow(String msg) {
     Fluttertoast.showToast(msg: msg, toastLength: Toast.LENGTH_SHORT);
@@ -244,7 +240,7 @@ class Common {
           ),
         ),
         useMaterial3: false,
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
             backgroundColor: ColorFile.whiteColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(8.r)))),
@@ -404,7 +400,6 @@ class Common {
   bool isFieldNotEmpty(String? fieldName) {
     return fieldName != null && fieldName.isNotEmpty;
   }
-
 
   String mGetSuffixDate(DateTime dateTime) {
     String formattedDate = DateFormat('dd').format(dateTime);
@@ -1040,8 +1035,6 @@ class Common {
     return date;
   }
 
-
-
   //for (###)-###-####
   static String displayFormatMobileNumber(String mobileNumber) {
     // Ensure the number has 10 digits
@@ -1091,8 +1084,6 @@ class Common {
     }
   }
 
-
-
   String removeDashes({required String cardNumber}) {
     return cardNumber.replaceAll('-', '');
   }
@@ -1126,7 +1117,6 @@ class Common {
     // Format the masked card number
     return '**** **** **** $lastFourDigits';
   }
-
 
   static EnvironmentEnums getEnvironment() {
     var dynamicUrl = window.location.host;
@@ -1186,8 +1176,6 @@ class Common {
   getStatusUntilCompleteAppointment() {
     return "PENDING,SCHEDULED,ARRIVED,BEGIN_INTAKE,COMPLETE_INTAKE,BEGIN_TRIAGE,COMPLETE_TRIAGE,BEGIN_CLN_ASSESS,RESCHEDULED";
   }
-
-
 
   void carousalScrollListener(ScrollController scrollController,
       Rx<bool> isAtStart, Rx<bool> isAtEnd, Rx<bool> isAtMiddle) {
@@ -1329,29 +1317,8 @@ class Common {
     return addressParts.isNotEmpty ? addressParts.join(', ') : '';
   }
 
-  static Future<PagerModel> getTabUrlParameters({
-    required RxList<PagerModel> pagerList,
-    required Rx<PagerModel> selectedPager,
-  }) async {
-    if (pagerList.isNotEmpty) {
-      var urlParameters = Get.parameters;
-      var isSelectedTab = urlParameters[RequestAndResponseParams.isTab];
-      if (isSelectedTab != null && isSelectedTab.isNotEmpty) {
-        int tabIndex = int.tryParse(isSelectedTab) ?? 0;
-        if (tabIndex >= 0 && tabIndex < pagerList.length) {
-          selectedPager.value = pagerList[tabIndex];
-        } else {
-          selectedPager.value = pagerList[0];
-        }
-      } else {
-        selectedPager.value = pagerList[0];
-      }
-      return selectedPager.value;
-    } else {
-      return PagerModel();
-    }
-  }
-  Future<Uint8List> createUint8ListFromString({required String base64String}) async {
+  Future<Uint8List> createUint8ListFromString(
+      {required String base64String}) async {
     final encodedStr = base64String;
     Uint8List bytes = base64.decode(encodedStr);
     return bytes;
@@ -1360,7 +1327,7 @@ class Common {
     //     "$dir/" + DateTime.now().millisecondsSinceEpoch.toString() + ".pdf");
     // await file.writeAsBytes(bytes);
     // return file.path;
-  // return '';
+    // return '';
   }
 
   static String displayGetInstallment(
@@ -1377,6 +1344,7 @@ class Common {
       return finalAmount;
     }
   }
+
   String numberToOrdinal(int number) {
     if (number <= 0) return number.toString(); // Handle non-positive numbers
 

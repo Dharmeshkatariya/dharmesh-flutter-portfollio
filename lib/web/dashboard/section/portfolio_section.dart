@@ -4,8 +4,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:vikram_portfollio_dark/utils/color_file.dart';
-import 'package:vikram_portfollio_dark/utils/string_file.dart';
+import 'package:dharmesh_portfollio/utils/color_file.dart';
+import 'package:dharmesh_portfollio/utils/string_file.dart';
 import '../../../model/portfolio_model.dart';
 
 class CategoryTabModel {

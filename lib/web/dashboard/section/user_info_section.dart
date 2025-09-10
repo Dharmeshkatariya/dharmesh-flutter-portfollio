@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vikram_portfollio_dark/custom_view/custom_info_widget.dart';
+import 'package:dharmesh_portfollio/custom_view/custom_info_widget.dart';
 import '../../../custom_view/border_container.dart';
 import '../../../custom_view/custom_text.dart';
 import '../../../utils/app_text_styles.dart';

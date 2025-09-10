@@ -1,8 +1,9 @@
+import 'package:dharmesh_portfollio/utils/color_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vikram_portfollio_dark/custom_view/custom_text.dart';
-import 'package:vikram_portfollio_dark/utils/app_text_styles.dart';
-import 'package:vikram_portfollio_dark/utils/color_file.dart';
+import '../utils/app_text_styles.dart';
+import 'custom_text.dart';
+
 class CustomInfoWidget extends StatelessWidget {
   final List<String> items;
   final bool isNumberedList;
@@ -20,14 +21,14 @@ class CustomInfoWidget extends StatelessWidget {
     this.bulletColor,
     this.spacing = 8.0,
   }) : assert(!(isNumberedList && isBulletList),
-  'Cannot have both numbered and bullet list');
-
+            'Cannot have both numbered and bullet list');
 
   @override
   Widget build(BuildContext context) {
-    final defaultTextStyle = textStyle ?? AppTextStyles.regularBlack13.copyWith(
-      color: ColorFile.blueColor,
-    );
+    final defaultTextStyle = textStyle ??
+        AppTextStyles.regularBlack13.copyWith(
+          color: ColorFile.blueColor,
+        );
     final bulletColor = this.bulletColor ?? ColorFile.blueColor;
 
     return ConstrainedBox(
@@ -41,7 +42,8 @@ class CustomInfoWidget extends StatelessWidget {
         children: [
           for (int i = 0; i < items.length; i++)
             Padding(
-              padding: EdgeInsets.only(bottom: i == items.length - 1 ? 0 : spacing),
+              padding:
+                  EdgeInsets.only(bottom: i == items.length - 1 ? 0 : spacing),
               child: ConstrainedBox(
                 constraints: BoxConstraints(
                   minWidth: double.infinity,

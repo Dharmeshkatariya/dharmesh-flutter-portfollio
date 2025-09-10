@@ -10,9 +10,9 @@ class PageScrollerCircularProgressBar extends StatelessWidget {
   final ScrollController scrollController;
 
   PageScrollerCircularProgressBar({
-    Key? key,
+    super.key,
     required this.scrollController,
-  }) : super(key: key);
+  });
 
   RxDouble scrollProgress = 0.0.obs;
 
@@ -35,7 +35,7 @@ class PageScrollerCircularProgressBar extends StatelessWidget {
       bottom: 50.w,
       right: 20.h,
       child: Obx(
-            () => InkWell(
+        () => InkWell(
           onTap: () {
             scrollController.animateTo(
               0.0,
@@ -67,14 +67,16 @@ class PageScrollerCircularProgressBar extends StatelessWidget {
                   strokeWidth: 3,
                   value: scrollProgress.value,
                   backgroundColor: Colors.grey,
-                  valueColor: AlwaysStoppedAnimation<Color>(ColorFile.webThemeColor),
+                  valueColor:
+                      AlwaysStoppedAnimation<Color>(ColorFile.webThemeColor),
                 ),
               ),
               SvgPicture.asset(
                 AssetsIcons.icUpArrow,
                 width: 24.w,
                 height: 24.h,
-                colorFilter: ColorFilter.mode(ColorFile.webThemeColor, BlendMode.srcIn),
+                colorFilter:
+                    ColorFilter.mode(ColorFile.webThemeColor, BlendMode.srcIn),
               ),
             ],
           ),

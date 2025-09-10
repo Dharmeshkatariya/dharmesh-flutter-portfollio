@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vikram_portfollio_dark/web/dashboard/clipper/wave_clipper.dart';
+import 'package:dharmesh_portfollio/web/dashboard/clipper/wave_clipper.dart';
 import 'deep_wave_clipper.dart';
 import 'double_wave_clipper.dart';
 

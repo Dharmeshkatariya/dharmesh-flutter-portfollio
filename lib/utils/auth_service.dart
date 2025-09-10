@@ -1,6 +1,6 @@
 
 
-import 'package:vikram_portfollio_dark/utils/shared_pref.dart';
+import 'package:dharmesh_portfollio/utils/shared_pref.dart';
 
 class AuthService {
   // Private constructor

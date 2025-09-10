@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:vikram_portfollio_dark/web/dashboard/widget/sidebar_list_view.dart';
+import 'package:dharmesh_portfollio/web/dashboard/widget/sidebar_list_view.dart';
 import '../../../custom_view/custom_horizontal_pager.dart';
 import '../../../utils/color_file.dart';
 import '../../../utils/common.dart';
