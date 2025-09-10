@@ -231,96 +231,158 @@ class DashboardHomeViewController extends GetxController
   void _initPortfolio() {
     List<PortfolioModel> portfolioItems = [];
 
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "Novo Cinemas",
-      description:
-          "Create user-friendly design and smooth working on any device platform.",
-      buttonText: "Case Study",
-      siteUrl:
-          "https://play.google.com/store/apps/details?id=com.grandcinema.gcapp.screens",
-    ));
-
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "DrinksView",
-      description:
-          "Create user-friendly design and smooth working on any device platform.",
-      buttonText: "Case Study",
-      siteUrl:
-          "https://play.google.com/store/apps/details?id=in.com.trendonrent.trendonrent",
-    ));
-
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "Dhasa - Patel Samaj",
-      description:
-          "Create user-friendly design and smooth working on any device platform.",
-      buttonText: "Case Study",
-      siteUrl:
-          "https://play.google.com/store/apps/details?id=com.dhasagam.patelsamaj&pli=1",
-    ));
-
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "GloriFi",
-      description:
-          """GloriFi is a financial technology company, not a bank.   Banking services provided by Trans Pecos Banks, SSB, Member FDIC. The Debit Mastercard® and the World Debit Mastercard® are issued  by Trans Pecos Banks, SSB pursuant to license by Mastercard®  International Incorporated and can be used everywhere Mastercard® is accepted. Mastercard, World Debit Card, and the circle's designs are registered trademarks of  Mastercard International Incorporated. ©2022 Mastercard. All rights reserved.""",
-      buttonText: "Case Study",
-      siteUrl: "https://glorifi.com/",
-    ));
-
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "GGATE",
-      description:
-          """GGATE is an interactive society management app that enables efficientmanagement of society's security, maintenance, staffing, bookkeeping, operations, andmore.""",
-      buttonText: "Case Study",
-      siteUrl: "https://play.google.com/store/apps/details?id=com.ripl.ggate",
-    ));
-
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.design,
-      title: "HOME AUTOMATION",
-      description:
-          """The name itself depicts the app which manages you home. It connectseverything in your home, and you can control all of your favourite connected homedevices, wearable from single highly customized interface.""",
-      buttonText: "Case Study",
-      siteUrl: "",
-    ));
+    // MTZ Infotech Website
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
       category: StringFile.web,
-      title: "HA AUTOMATIONS",
-      description:
-          """HA Automation is provided fully automated handicap chair.We can control chairs using mobile applications. Control like we can move, up or downchair according to over requirements.""",
-      buttonText: "Case Study",
-      siteUrl: "",
+      title: "MTZ Infotech - Corporate Website",
+      description: """
+Designed and developed a modern, responsive portfolio website for MTZ Infotech showcasing company services and projects.
+
+• Fully responsive design optimized for all devices
+• Built with Flutter for cross-platform consistency
+• Adaptive layout techniques and flexible design principles
+• Professional UI/UX with smooth animations and transitions
+""",
+      buttonText: "View Live Site",
+      siteUrl: "https://mtzinfotech.com/#/home",
+      tags: ["Flutter", "Web", "Responsive", "UI/UX"],
+      isFeatured: true,
     ));
 
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.web,
-      title: "POOL LAB",
-      description:
-          """Pool Lab is giving all the information about the swimming pool. Like waterlevel, PH level, Chlorin level ext. Also, we can change, and maintain all the parametersrelated to the swimming pool using the mobile application.""",
-      buttonText: "Case Study",
-      siteUrl: "",
-    ));
+    // DrinksView App
     portfolioItems.add(PortfolioModel(
       imagePath: AssetsIcons.portfolio,
       category: StringFile.mobile,
-      title: "QR NAMASTE",
-      description:
-          """Qrnamste allows the Visitors to check in digitally eliminating the hecticpaperwork. Our Web-based Dashboard helps track health-related information to safelyminimize the spread of COVID-19 and also leaves a professional first impression on yourVisitors.""",
+      title: "DrinksView - Beverage Discovery",
+      description: """
+A mobile application for discovering and exploring various beverages with detailed information and user reviews.
+
+• Modern Material Design interface
+• Real-time product information and ratings
+• Social features for sharing drink experiences
+• Personalized recommendations engine
+""",
+      buttonText: "Play Store",
+      siteUrl: "https://play.google.com/store/apps/details?id=in.com.trendonrent.trendonrent",
+      tags: ["Flutter", "Android", "iOS", "Firebase"],
+    ));
+
+    // Dhasa - Patel Samaj App
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.mobile,
+      title: "Dhasa Patel Samaj - Community App",
+      description: """
+Community application for Patel Samaj members with comprehensive features for connectivity and information sharing.
+
+• User-friendly interface with intuitive navigation
+• Cross-platform compatibility (Android & iOS)
+• Member directory with search functionality
+• Event management and notifications
+• Community news and updates
+""",
+      buttonText: "Download App",
+      siteUrl: "https://play.google.com/store/apps/details?id=com.dhasagam.patelsamaj&pli=1",
+      tags: ["Flutter", "Community", "Social", "Cross-platform"],
+      isFeatured: true,
+    ));
+
+    // Chinese News App
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.mobile,
+      title: "Vision Magazine - News Platform",
+      description: """
+Daily news application providing international coverage with expert commentary and analysis.
+
+• Daily current affairs and international news
+• Expert columns and opinion pieces
+• Multi-language support
+• Offline reading capability
+• Push notifications for breaking news
+""",
+      buttonText: "View App",
+      siteUrl: "https://play.google.com/store/apps/details?id=tw.com.gvm.dailynews",
+      tags: ["News", "Content", "Media", "Flutter"],
+    ));
+
+    // Roommatik App
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.web,
+      title: "Roommatik - Roommate Finder",
+      description: """
+Modern web application for finding compatible roommates with advanced matching algorithms.
+
+• Responsive Flutter web application
+• REST API integration for real-time data
+• Firebase hosting for optimal performance
+• Biometric authentication system
+• Advanced search and filtering options
+""",
+      buttonText: "Visit Website",
+      siteUrl: "https://roommatik-eae91.web.app/#/home",
+      tags: ["Flutter Web", "Firebase", "REST API", "Authentication"],
+    ));
+
+    // Viosa Learning App
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.mobile,
+      title: "Viosa - AI Learning Platform",
+      description: """
+Comprehensive learning application with AI-powered features for career development and skill enhancement.
+
+• AI-powered resume generation and optimization
+• Personalized career guidance and insights
+• Mock interviews with AI evaluation
+• Course search and recommendation system
+• Webview integration for content delivery
+""",
+      buttonText: "Learn More",
+      siteUrl: "",
+      tags: ["AI", "Education", "Career", "Flutter"],
+    ));
+
+    // Pool Lab App
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.mobile,
+      title: "Pool Lab - Swimming Pool Management",
+      description: """
+Smart swimming pool monitoring and management application with real-time parameter tracking.
+
+• Real-time water quality monitoring (pH, chlorine levels)
+• Remote parameter adjustment and control
+• Maintenance scheduling and alerts
+• Data visualization and historical trends
+• Multi-pool management capability
+""",
+      buttonText: "View Details",
+      siteUrl: "",
+      tags: ["IoT", "Monitoring", "Management", "Flutter"],
+    ));
+
+    // QR Namaste App
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.mobile,
+      title: "QR Namaste - Digital Visitor Management",
+      description: """
+Digital visitor management system eliminating paperwork with health tracking and professional check-in experience.
+
+• Digital visitor registration and check-in
+• Health screening and COVID-19 safety features
+• QR code-based access system
+• Professional dashboard for administration
+• Visitor history and analytics
+""",
       buttonText: "Case Study",
       siteUrl: "",
+      tags: ["QR Code", "Security", "Management", "Flutter"],
     ));
+
     portfolioList.assignAll(portfolioItems);
   }
 

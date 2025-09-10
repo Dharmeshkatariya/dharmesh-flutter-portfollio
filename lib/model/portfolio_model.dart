@@ -9,8 +9,9 @@ class PortfolioModel {
   String? siteUrl = '';
   RxBool isMoreExpanded = false.obs;
 
-  final List<String>? tags; // Add this for tags/chips
-  final bool? isFeatured; //
+  final List<String>? tags;
+  final bool? isFeatured;
+
   PortfolioModel(
       {this.buttonText,
       this.description,
