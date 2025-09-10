@@ -1,3 +1,4 @@
+import 'package:dharmesh_portfollio/utils/assets_icons.dart';
 import 'package:flutter/material.dart';
 import '../../../responsive.dart';
 
@@ -43,7 +44,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
           child: Container(
             height: widget.height!,
             width: widget.width!,
-            padding:  EdgeInsets.all(defaultPadding / 4),
+            padding: EdgeInsets.all(defaultPadding / 4),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               gradient: const LinearGradient(colors: [
@@ -70,7 +71,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Image.asset(
-                'assets/images/image.png',
+                AssetsIcons.icSplashImage,
                 height: Responsive.isLargeMobile(context)
                     ? MediaQuery.sizeOf(context).width * 0.2
                     : Responsive.isTablet(context)

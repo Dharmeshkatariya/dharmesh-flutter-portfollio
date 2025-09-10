@@ -377,7 +377,7 @@ class DashboardHomeViewController extends GetxController
       final blob = html.Blob([response]);
       final url = html.Url.createObjectUrlFromBlob(blob);
       final anchor = html.AnchorElement(href: url)
-        ..setAttribute('download', 'Vikram_CV.pdf')
+        ..setAttribute('download', 'Dharmesh_CV.pdf')
         ..click();
 
       html.Url.revokeObjectUrl(url);

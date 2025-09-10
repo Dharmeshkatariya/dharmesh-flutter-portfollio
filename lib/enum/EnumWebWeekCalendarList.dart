@@ -1,5 +1,0 @@
-
-enum EnumWebCustomWeekCalendarWidget{
-  webDoctorDetailView,
-  webDoctorListingView
-}

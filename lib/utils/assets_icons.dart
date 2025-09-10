@@ -9,6 +9,7 @@ class AssetsIcons {
   static const String icApple = '${imagePath}ic_apple.svg';
   static const String icFacebook = '${imagePath}ic_facebook.svg';
   static const String icGoogle = '${imagePath}ic_google.svg';
+  static const String icSplashImage = '${imagePath}splash.png';
   static const String icCircleRound = '${imagePath}ic_circle_check.svg';
   static const String icCheckBG = '${imagePath}ic_check_bg.svg';
   static const String dharmeshImage = '${imagePath}dharmesh.jpg';

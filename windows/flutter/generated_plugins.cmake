@@ -3,15 +3,8 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  connectivity_plus
-  emoji_picker_flutter
-  file_saver
-  file_selector_windows
   firebase_auth
   firebase_core
-  permission_handler_windows
-  printing
-  r_get_ip
   url_launcher_windows
 )
 

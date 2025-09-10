@@ -1,4 +1,0 @@
-enum EnumWebCustomPatientOrProvider{
-  patientPortal,
-  providerPortal
-}

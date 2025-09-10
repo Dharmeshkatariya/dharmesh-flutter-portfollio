@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:html' as html;
+import 'package:dharmesh_portfollio/utils/string_file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -88,7 +89,7 @@ class MyApp extends StatelessWidget {
     return ToastificationWrapper(
         child: ScreenUtilInit(
           builder: (context, widget) => GetMaterialApp(
-              title: ConstantsFile.appName,
+              title: StringFile.appName,
               debugShowCheckedModeBanner: false,
               initialBinding: BindingsBuilder(() {
                 findTenant();
