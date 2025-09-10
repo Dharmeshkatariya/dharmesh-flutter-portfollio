@@ -117,9 +117,7 @@ class DashboardHomeViewController extends GetxController
   RxList<SkillProgressModel> technicalSkillList = <SkillProgressModel>[].obs;
 
   _initTechnicalSkill() {
-    technicalSkillList.add(
-      SkillProgressModel(skillName: StringFile.java, percentage: 80),
-    );
+
     technicalSkillList.add(
       SkillProgressModel(skillName: StringFile.flutter, percentage: 99),
     );
@@ -135,21 +133,15 @@ class DashboardHomeViewController extends GetxController
     technicalSkillList.add(
       SkillProgressModel(skillName: StringFile.git, percentage: 85),
     );
-    technicalSkillList.add(
-      SkillProgressModel(skillName: StringFile.graphQl, percentage: 80),
-    );
+
     technicalSkillList.add(
       SkillProgressModel(skillName: StringFile.firebase, percentage: 84),
     );
-    technicalSkillList.add(
-      SkillProgressModel(skillName: StringFile.retroFit, percentage: 81),
-    );
+
     technicalSkillList.add(
       SkillProgressModel(skillName: StringFile.jira, percentage: 89),
     );
-    technicalSkillList.add(
-      SkillProgressModel(skillName: StringFile.webSocket, percentage: 85),
-    );
+
   }
 
   _initSocialMedia() {
@@ -245,7 +237,7 @@ Designed and developed a modern, responsive portfolio website for MTZ Infotech s
 • Professional UI/UX with smooth animations and transitions
 """,
       buttonText: "View Live Site",
-      siteUrl: "https://mtzinfotech.com/#/home",
+      siteUrl: "https://mtzinfotech.com/#/",
       tags: ["Flutter", "Web", "Responsive", "UI/UX"],
       isFeatured: true,
     ));
@@ -264,7 +256,8 @@ A mobile application for discovering and exploring various beverages with detail
 • Personalized recommendations engine
 """,
       buttonText: "Play Store",
-      siteUrl: "https://play.google.com/store/apps/details?id=in.com.trendonrent.trendonrent",
+      siteUrl:
+          "https://play.google.com/store/apps/details?id=in.com.trendonrent.trendonrent",
       tags: ["Flutter", "Android", "iOS", "Firebase"],
     ));
 
@@ -283,7 +276,8 @@ Community application for Patel Samaj members with comprehensive features for co
 • Community news and updates
 """,
       buttonText: "Download App",
-      siteUrl: "https://play.google.com/store/apps/details?id=com.dhasagam.patelsamaj&pli=1",
+      siteUrl:
+          "https://play.google.com/store/apps/details?id=com.dhasagam.patelsamaj&pli=1",
       tags: ["Flutter", "Community", "Social", "Cross-platform"],
       isFeatured: true,
     ));
@@ -303,7 +297,9 @@ Daily news application providing international coverage with expert commentary a
 • Push notifications for breaking news
 """,
       buttonText: "View App",
-      siteUrl: "https://play.google.com/store/apps/details?id=tw.com.gvm.dailynews",
+      isFeatured: true,
+      siteUrl:
+          "https://play.google.com/store/apps/details?id=tw.com.gvm.dailynews",
       tags: ["News", "Content", "Media", "Flutter"],
     ));
 
@@ -322,7 +318,7 @@ Modern web application for finding compatible roommates with advanced matching a
 • Advanced search and filtering options
 """,
       buttonText: "Visit Website",
-      siteUrl: "https://roommatik-eae91.web.app/#/home",
+      siteUrl: "https://roommatik-eae91.web.app",
       tags: ["Flutter Web", "Firebase", "REST API", "Authentication"],
     ));
 
@@ -343,44 +339,6 @@ Comprehensive learning application with AI-powered features for career developme
       buttonText: "Learn More",
       siteUrl: "",
       tags: ["AI", "Education", "Career", "Flutter"],
-    ));
-
-    // Pool Lab App
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "Pool Lab - Swimming Pool Management",
-      description: """
-Smart swimming pool monitoring and management application with real-time parameter tracking.
-
-• Real-time water quality monitoring (pH, chlorine levels)
-• Remote parameter adjustment and control
-• Maintenance scheduling and alerts
-• Data visualization and historical trends
-• Multi-pool management capability
-""",
-      buttonText: "View Details",
-      siteUrl: "",
-      tags: ["IoT", "Monitoring", "Management", "Flutter"],
-    ));
-
-    // QR Namaste App
-    portfolioItems.add(PortfolioModel(
-      imagePath: AssetsIcons.portfolio,
-      category: StringFile.mobile,
-      title: "QR Namaste - Digital Visitor Management",
-      description: """
-Digital visitor management system eliminating paperwork with health tracking and professional check-in experience.
-
-• Digital visitor registration and check-in
-• Health screening and COVID-19 safety features
-• QR code-based access system
-• Professional dashboard for administration
-• Visitor history and analytics
-""",
-      buttonText: "Case Study",
-      siteUrl: "",
-      tags: ["QR Code", "Security", "Management", "Flutter"],
     ));
 
     portfolioList.assignAll(portfolioItems);
