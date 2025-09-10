@@ -184,22 +184,11 @@ class _PortfolioSectionState extends State<PortfolioSection> {
   }
 
   Widget _buildTabContent(CategoryTabModel category, bool isSelected) {
-    return AnimatedContainer(
-      duration: 400.ms,
-      curve: Curves.easeOutBack,
+    return Container(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       decoration: BoxDecoration(
         color: isSelected ? category.selectedColor : Colors.transparent,
         borderRadius: BorderRadius.circular(20.r),
-        boxShadow: isSelected
-            ? [
-          BoxShadow(
-            color: category.selectedColor.withOpacity(0.3),
-            blurRadius: 10,
-            spreadRadius: 2,
-          )
-        ]
-            : null,
       ),
       child: Center(
         child: Text(

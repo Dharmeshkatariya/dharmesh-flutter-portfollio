@@ -4,7 +4,7 @@ class AssetsIcons {
   static const String resumPath = 'assets/resume/';
   static const String animationPath = 'assets/animation/';
 
-  static const String icEmailView = '${imagePath}ic_email_view.svg';
+  static const String icEmailView = '${iconPath}ic_email_view.svg';
   static const String icCheckMark = '${imagePath}ic_check_mark.svg';
   static const String icApple = '${imagePath}ic_apple.svg';
   static const String icFacebook = '${imagePath}ic_facebook.svg';
@@ -26,10 +26,12 @@ class AssetsIcons {
   static const String icInfo = '${imagePath}ic_info.svg';
   static const String icWarning = '${imagePath}ic_warning.svg';
   static const String icMenu = '${iconPath}menu.svg';
-  static const String icCall = '${imagePath}ic_call.svg';
+  static const String icCall = '${iconPath}ic_call.svg';
   static const String icLocationFill = '${imagePath}icon_location_fill.svg';
   static const String icLinkSvg = '${imagePath}ic_link.svg';
   static const String icLinkSvgTwo = '${imagePath}ic_link_two.svg';
+
+  // animation
   static const String settingAnimation = '${animationPath}setting.json';
   static const String launchingAnimation = '${animationPath}launching.json';
   static const String marketingAnimation = '${animationPath}marketing.json';
