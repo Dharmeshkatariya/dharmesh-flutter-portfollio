@@ -117,7 +117,6 @@ class DashboardHomeViewController extends GetxController
   RxList<SkillProgressModel> technicalSkillList = <SkillProgressModel>[].obs;
 
   _initTechnicalSkill() {
-
     technicalSkillList.add(
       SkillProgressModel(skillName: StringFile.flutter, percentage: 99),
     );
@@ -141,7 +140,6 @@ class DashboardHomeViewController extends GetxController
     technicalSkillList.add(
       SkillProgressModel(skillName: StringFile.jira, percentage: 89),
     );
-
   }
 
   _initSocialMedia() {
@@ -222,6 +220,79 @@ class DashboardHomeViewController extends GetxController
 
   void _initPortfolio() {
     List<PortfolioModel> portfolioItems = [];
+    portfolioItems.add(PortfolioModel(
+      imagePath: AssetsIcons.portfolio,
+      category: StringFile.web,
+      title: "Helix Care - Healthcare Management System",
+      description: """
+A comprehensive healthcare management platform providing end-to-end solutions for medical practices, patients, and healthcare providers. Built with modern Flutter framework for exceptional cross-platform performance.
+
+**Key Features & Modules:**
+
+🏥 **Practice Management**
+• Multi-location practice support with centralized administration
+• Role-based access control with granular permissions
+• Complete user management system for staff and providers
+
+👥 **Patient Portal**
+• Secure patient registration and profile management
+• Digital medical records and chart management
+• Appointment scheduling with real-time availability
+
+🩺 **Doctor Management**
+• Complete provider profiles with specialties and availability
+• Referral system for specialist consultations
+• Telemedicine integration with face-to-face virtual meetings
+
+💊 **Clinical Operations**
+• Electronic health records (EHR) system
+• Digital prescription management
+• Lab results integration and tracking
+
+💰 **Billing & Insurance**
+• RCM (Revenue Cycle Management) integration
+• Insurance verification and eligibility checking
+• Automated billing with multiple payment options
+• Detailed billing history and transaction tracking
+
+💳 **Payment System**
+• Secure payment processing integration
+• Wallet balance management for patients
+• Bank account integration and payment methods
+• Comprehensive financial reporting
+
+📱 **Responsive Design**
+• Fully responsive web application
+• Cross-platform compatibility (Web, Tablet, Mobile)
+• Adaptive UI for optimal experience on all devices
+• Professional healthcare-focused design
+
+**Technical Stack:**
+• Flutter Web for frontend development
+• Responsive design principles
+• REST API integration
+• Secure authentication system
+• Real-time data synchronization
+• Cloud-based infrastructure
+
+The platform serves healthcare providers, patients, and administrative staff with a seamless, secure, and efficient healthcare management experience.
+""",
+      buttonText: "View Live Site",
+      siteUrl: "https://qa.helixdoc.com",
+      tags: [
+        "Flutter",
+        "Web",
+        "Responsive",
+        "Healthcare",
+        "EHR",
+        "Telemedicine",
+        "RCM",
+        "Firebase",
+        "REST API",
+        "UI/UX"
+      ],
+      isFeatured: true,
+    ));
 
     // MTZ Infotech Website
     portfolioItems.add(PortfolioModel(
