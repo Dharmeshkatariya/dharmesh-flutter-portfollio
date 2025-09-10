@@ -382,11 +382,11 @@ class _PortfolioSectionState extends State<PortfolioSection> {
     if (width > 1400) return 0.8; // Standard desktop
     if (width > 1200) return 0.8; // Small desktop
     if (width > 1024) return 0.7; // Large tablets landscape
-    if (width > 900) return 0.7; // Tablets landscape
-    if (width > 768) return 0.7; // iPad portrait
-    if (width > 600) return 0.7; // Large mobile landscape
-    if (width > 480) return 0.7; // Medium mobile
-    if (width > 360) return 0.7; // Small mobile
+    if (width > 900) return 0.9; // Tablets landscape
+    if (width > 768) return 0.9; // iPad portrait
+    if (width > 600) return 0.9; // Large mobile landscape
+    if (width > 480) return 0.9; // Medium mobile
+    if (width > 360) return 0.8; // Small mobile
     return 0.7; // Very small screens
   }
 
