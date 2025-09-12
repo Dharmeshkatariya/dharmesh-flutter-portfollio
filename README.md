@@ -16,7 +16,7 @@ A modern, responsive portfolio website built with Flutter showcasing my skills, 
 
 | Home Screen | Portfolio | About Me |
 |-------------|-----------|----------|
-| <img src="assets/screenshots/home.png" width="300"> | <img src="assets/screenshots/portfolio.png" width="300"> | <img src="assets/screenshots/skill.png" width="300"> |
+| <img src="assets/screenshots/home.png" width="300"> | <img src="assets/screenshots/portfollio.png" width="300"> | <img src="assets/screenshots/skill.png" width="300"> |
 
 | Development | Project Details | Contact |
 |-------------|-----------------|---------|
