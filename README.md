@@ -1,47 +1,59 @@
-# Dharmesh Portfolio - Flutter Developer
+# Dharmesh Purohit - Flutter Developer Portfolio
 
-![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)
-![Dart](https://img.shields.io/badge/Dart-2.17+-blue.svg)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-green.svg)
+![Flutter](https://img.shields.io/badge/Flutter-3.0+-02569B?style=for-the-badge&logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-2.17+-0175C2?style=for-the-badge&logo=dart)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-green?style=for-the-badge)
+![Web](https://img.shields.io/badge/Web-Deployed-success?style=for-the-badge)
+![Mobile](https://img.shields.io/badge/Mobile-Ready-important?style=for-the-badge)
 
-A modern, responsive portfolio website built with Flutter showcasing my skills, projects, and experience as a Flutter Developer.
+A modern, responsive portfolio website built with Flutter showcasing my skills, projects, and experience as a Flutter Developer. This single codebase works seamlessly on web, Android, and iOS platforms.
 
-## 🚀 Features
+## 🚀 Live Demo
 
-- **Modern UI/UX** - Clean and professional design
-- **Responsive Design** - Works on mobile, tablet, and desktop
-- **Portfolio Showcase** - Display projects with images and descriptions
-- **Interactive Animations** - Smooth animations for better user experience
-- **Contact Form** - Easy way for potential clients to reach out
-- **Downloadable CV** - Direct download link for my resume
-- **Theme Customization** - Color theming support
+[**View Live Portfolio Website**](https://your-portfolio-link.com) • [**Download Android APK**](https://drive.google.com/your-apk-link)
+
+## 📸 Screenshots
+
+| Home Screen | Portfolio | About Me |
+|-------------|-----------|----------|
+| <img src="assets/screenshots/home.png" width="300"> | <img src="assets/screenshots/portfolio.png" width="300"> | <img src="assets/screenshots/skill.png" width="300"> |
+
+| Development | Project Details | Contact |
+|-------------|-----------------|---------|
+| <img src="assets/screenshots/development.png" width="300"> | <img src="assets/screenshots/project_detail.png" width="300"> | <img src="assets/screenshots/contact.png" width="300"> |
+
+## ✨ Features
+
+- **📱 Multi-Platform** - Single codebase for Web, Android, and iOS
+- **🎨 Modern UI/UX** - Clean, professional design with smooth animations
+- **📊 Portfolio Showcase** - Interactive project gallery with detailed views
+- **🛠 Skills Section** - Technical proficiency with visual indicators
+- **📞 Contact Integration** - Easy way for potential clients to reach out
+- **📄 CV Download** - Direct download link for my resume
+- **🌙 Dark/Light Theme** - Theme customization support
+- **⚡ Fast Performance** - Optimized for smooth user experience
 
 ## 🛠️ Technologies Used
 
-- **Flutter** - Cross-platform framework
-- **Dart** - Programming language
-- **GetX** - State management and navigation
-- **Firebase** - Backend services (optional)
-- **Responsive Framework** - Adaptive UI components
+- **Flutter 3.0+** - Cross-platform framework
+- **Dart 2.17+** - Programming language
+- **GetX** - State management, navigation, and dependency injection
+- **Responsive Framework** - Adaptive UI components for all screen sizes
+- **Google Fonts** - Typography management
+- **URL Launcher** - External link handling
+- **Firebase** - Optional backend services (Analytics, Hosting)
 
-## 📱 Screenshots
+## 📦 Installation & Setup
 
-| Home Screen | Portfolio | About Me                                                                             |
-|------------|-----------|--------------------------------------------------------------------------------------|
-| ![Home](assets/screenshots/home.png) | ![Portfolio](assets/screenshots/portfollio.png) | ![Skill](assets/screenshots/skill.png)!  [Developemnt](assets/screenshots/development.png) |
+### Prerequisites
+- Flutter SDK (3.0 or higher)
+- Dart SDK (2.17 or higher)
+- Android Studio / VS Code
+- Chrome browser (for web testing)
 
-## 🎨 UI/UX Features
-
-- **Hero Section** with professional introduction
-- **Skills Showcase** with progress indicators
-- **Project Gallery** with filter options
-- **Smooth Animations** and transitions
-- **Dark/Light Theme** support
-- **Social Media Integration**
-
-## 📦 Installation
+### Steps to Run
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/dharmesh-portfolio.git
-   cd dharmesh-portfolio
+   git clone https://github.com/your-username/flutter-portfolio.git
+   cd flutter-portfolio
