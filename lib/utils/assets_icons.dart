@@ -22,7 +22,7 @@ class AssetsIcons {
   static const String icLinkedin = '${iconPath}linkedin.svg';
   static const String portfolio = '${imagePath}portfolio.png';
   static const String icUpArrow = '${imagePath}ic_up_arrow.svg';
-  static const String cv = '${resumPath}dharmesh_flutter_2025.pdf';
+  static const String cv = '${resumPath}Dharmesh_flutter_2026.pdf';
   static const String icSuccess = '${imagePath}ic_success.svg';
   static const String icError = '${imagePath}ic_error.svg';
   static const String icInfo = '${imagePath}ic_info.svg';
